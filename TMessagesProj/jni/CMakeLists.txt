@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
-add_compile_options("-Wno-builtin-macro-redefined" "-D__FILE__=__FILE_NAME__")
+add_compile_options("-Wno-builtin-macro-redefined" "-Wno-unqualified-std-cast-call" "-Wno-unused-private-field" "-Wno-unused-but-set-variable" "-Wno-pessimizing-move" "-Wno-unused-const-variable" "-Wno-inconsistent-missing-override" "-Wno-macro-redefined" "-Wno-null-dereference" "-Wno-reorder-ctor" "-Wno-deprecated-declarations" "-D__FILE__=__FILE_NAME__")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-Bsymbolic,--exclude-libs,libtgvoip.a,libtgcalls.a,libtgcalls_tp.a,libtgnet.a,libflac.a,librlottie.a,libsqlite.a,
 ${CMAKE_HOME_DIRECTORY}/ffmpeg/${ANDROID_ABI}/libswscale.a,
 ${CMAKE_HOME_DIRECTORY}/ffmpeg/${ANDROID_ABI}/libavformat.a,
@@ -326,7 +326,7 @@ target_compile_definitions(sqlite PUBLIC
 include(${CMAKE_HOME_DIRECTORY}/voip/CMakeLists.txt)
 include(${CMAKE_HOME_DIRECTORY}/colorado/CMakeLists.txt)
 
-set(NATIVE_LIB "neko.49")
+set(NATIVE_LIB "lumi.49")
 
 #tmessages
 add_library(${NATIVE_LIB} SHARED
