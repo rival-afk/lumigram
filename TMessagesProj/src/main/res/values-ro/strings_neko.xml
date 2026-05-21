@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Setări Neko</string>
+    <string name="NekoSettings">Setări Lumigram</string>
     <string name="PreferIPv6">Preferați să vă conectați prin IPv6</string>
     <string name="MessageMenu">Meniu mesaj</string>
     <string name="HidePhone">Ascunde numărul de telefon</string>
@@ -186,14 +186,14 @@
     <string name="TabletMode">Modul tabletă</string>
     <string name="TabletModeAuto">Implicit</string>
     <string name="DeleteAllFromSelfDone">Toate mesajele dumneavoastră sunt șterse</string>
-    <string name="UnknownNekoSettingsOption">Nu există o astfel de opţiune de Setări Neko.</string>
+    <string name="UnknownNekoSettingsOption">Nu există o astfel de opţiune de Setări Lumigram.</string>
     <string name="ProviderYouDaoTranslate">Traducător YouDao</string>
     <string name="ProviderBaiduTranslate">Traducător Baidu</string>
     <string name="ProviderSogouTranslate">Traducător Sogou</string>
     <string name="Translated">tradus</string>
     <string name="PasscodeNeeded">Mai întâi trebuie să activați blocarea codului de acces</string>
     <string name="PasscodeNeko">Cod de acces</string>
-    <string name="PasscodeShowInSettings">Afișează în setările Neko</string>
+    <string name="PasscodeShowInSettings">Afișează în setările Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">După ascundere, puteți deschide această pagină **NUMAI** prin link:</string>
     <string name="PasscodeSet">Setați codul de acces</string>
     <string name="PasscodeEdit">Schimbați codul de acces</string>
@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">Clasic</string>
     <string name="NavigationAnimationSpring">Natural</string>
     <string name="CloudConfig">Setări Cloud</string>
-    <string name="CloudConfigDesc">Salvați setările Neko în Telegram Cloud.</string>
-    <string name="CloudConfigSyncDate">Ultima sincronizare: %s, cloud: %s</string>
+    <string name="CloudConfigDesc">Salvați setările Lumigram în Telegram Cloud.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Ultima sincronizare: %s, cloud: %s</string>
     <string name="CloudConfigSyncDateNever">niciodată</string>
     <string name="CloudConfigSync">Sincronizare în cloud</string>
     <string name="CloudConfigSyncShort">Sincronizare</string>
@@ -282,7 +282,7 @@
     <string name="CloudConfigRestoreShort">Restabiliți</string>
     <string name="CloudConfigSyncing">Se sincronizează...</string>
     <string name="CloudConfigAutoSync">Auto sincronizare</string>
-    <string name="CloudConfigAutoSyncDesc">Sincronizați setările automat cu cloud după modificarea setărilor Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Sincronizați setările automat cu cloud după modificarea setărilor Lumigram.</string>
     <string name="CloudConfigSyncFailed">Sincronizarea setărilor cu cloud a eșuat.</string>
     <string name="CloudConfigRestoreFailed">Restabilirea setărilor din cloud a eșuat.</string>
     <string name="ReducedColors">Reduceți culorile</string>

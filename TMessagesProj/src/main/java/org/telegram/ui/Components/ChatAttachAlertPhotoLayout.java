@@ -125,7 +125,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 @SuppressLint("ViewConstructor")
 public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayout implements NotificationCenter.NotificationCenterDelegate {
@@ -2545,7 +2545,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
         gridView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
         gridView.invalidate();
 
-        if ((NekoConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT)) && cameraView != null && cameraView.isInited()) {
+        if ((LumiConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT)) && cameraView != null && cameraView.isInited()) {
             cameraView.showTexture(true, animated);
         }
     }
@@ -2571,7 +2571,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             return;
         }
         if (cameraView == null) {
-            final boolean lazy = NekoConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT);
+            final boolean lazy = LumiConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT);
             cameraView = new CameraViewInternal(getContext(), isCameraFrontfaceBeforeEnteringEditMode != null ? isCameraFrontfaceBeforeEnteringEditMode : parentAlert.openWithFrontFaceCamera, lazy);
             //if (lazy) {
             //    cameraView.setThumbDrawable(cameraViewItemDecoration.placeholderDrawable);
@@ -2927,7 +2927,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
         }
         gridView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_AUTO);
 
-        if ((NekoConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT)) && cameraView != null) {
+        if ((LumiConfig.disableInstantCamera || !LiteMode.isEnabled(LiteMode.FLAGS_CHAT)) && cameraView != null) {
             cameraView.showTexture(false, animated);
         }
     }
@@ -4798,7 +4798,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
 
         public void updateBitmap() {
             Bitmap bitmap = null;
-            if (!NekoConfig.disableInstantCamera) {
+            if (!LumiConfig.disableInstantCamera) {
                 try {
                     File file = new File(ApplicationLoader.getFilesDirFixed(), "cthumb.jpg");
                     bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());

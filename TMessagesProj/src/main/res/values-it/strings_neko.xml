@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Impostazioni Neko</string>
+    <string name="NekoSettings">Impostazioni Lumigram</string>
     <string name="PreferIPv6">Prova a connetterti via IPv6</string>
     <string name="MessageMenu">Menu messaggio</string>
     <string name="HidePhone">Nascondi il mio numero</string>
@@ -186,14 +186,14 @@
     <string name="TabletMode">Modalità tablet</string>
     <string name="TabletModeAuto">Auto</string>
     <string name="DeleteAllFromSelfDone">Tutti i tuoi messaggi sono stati cancellati</string>
-    <string name="UnknownNekoSettingsOption">Non esiste questa opzione nelle impostazioni Neko.</string>
+    <string name="UnknownNekoSettingsOption">Non esiste questa opzione nelle impostazioni Lumigram.</string>
     <string name="ProviderYouDaoTranslate">Traduttore YouDao</string>
     <string name="ProviderBaiduTranslate">Traduttore Baidu</string>
     <string name="ProviderSogouTranslate">Traduttore Sogou</string>
     <string name="Translated">tradotto</string>
     <string name="PasscodeNeeded">Devi prima abilitare il codice di blocco dell\'accesso</string>
     <string name="PasscodeNeko">Codice d\'accesso</string>
-    <string name="PasscodeShowInSettings">Mostra in Impostazioni Neko</string>
+    <string name="PasscodeShowInSettings">Mostra in Impostazioni Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Dopo aver nascosto, puoi **SOLO** aprire questa pagina tramite il link:</string>
     <string name="PasscodeSet">Imposta il codice di accesso</string>
     <string name="PasscodeEdit">Cambia codice di accesso</string>
@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">Classico</string>
     <string name="NavigationAnimationSpring">Naturale</string>
     <string name="CloudConfig">Impostazioni Cloud</string>
-    <string name="CloudConfigDesc">Salva le tue impostazioni di Neko su cloud di Telegram.</string>
-    <string name="CloudConfigSyncDate">Ultima sincronizzazione: %s, cloud: %s</string>
+    <string name="CloudConfigDesc">Salva le tue impostazioni di Lumigram su cloud di Telegram.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Ultima sincronizzazione: %s, cloud: %s</string>
     <string name="CloudConfigSyncDateNever">mai</string>
     <string name="CloudConfigSync">Sincronizza con il cloud</string>
     <string name="CloudConfigSyncShort">Sincronizza</string>
@@ -282,7 +282,7 @@
     <string name="CloudConfigRestoreShort">Ripristina</string>
     <string name="CloudConfigSyncing">Sincronizzazione in corso...</string>
     <string name="CloudConfigAutoSync">Sincronizzazione automatica</string>
-    <string name="CloudConfigAutoSyncDesc">Sincronizza automaticamente con il cloud dopo aver apportato modifiche alle impostazioni di Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Sincronizza automaticamente con il cloud dopo aver apportato modifiche alle impostazioni di Lumigram.</string>
     <string name="CloudConfigSyncFailed">Impossibile sincronizzare le impostazioni con il cloud.</string>
     <string name="CloudConfigRestoreFailed">Impossibile ripristinare le impostazioni dal cloud.</string>
     <string name="ReducedColors">Riduci i colori</string>

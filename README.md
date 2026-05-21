@@ -1,9 +1,8 @@
 # 🐾 Lumigram
-[![Crowdin](https://badges.crowdin.net/e/a094217ac83905ae1625526d59bba8dc/localized.svg)](https://neko.crowdin.com/nekogram)  
 Lumigram is a third-party Telegram client with not many but useful modifications.
 
 - Website: https://github.com/rival-afk/lumigram
-- Telegram channel: https://t.me/nekoupdates
+- Telegram channel: https://t.me/lumigram
 - Downloads: https://github.com/rival-afk/lumigram
 - Feedback: https://github.com/Lumigram/Lumigram/issues
 
@@ -26,4 +25,4 @@ MTProto protocol manuals: https://core.telegram.org/mtproto
 
 Lumigram is forked from Telegram, thus most locales follows the translations of Telegram for Android, checkout https://translations.telegram.org/en/android/.
 
-As for the Lumigram specialized strings, we use Crowdin to translate Lumigram. Join project at https://neko.crowdin.com/nekogram. Help us bring Lumigram to the world!
+As for the Lumigram specialized strings, we use Crowdin to translate Lumigram. Help us bring Lumigram to the world!

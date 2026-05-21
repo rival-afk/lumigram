@@ -50,9 +50,10 @@ import java.util.Locale;
 import java.util.concurrent.CountDownLatch;
 
 import com.lumigram.messenger.FirebaseFix;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.AnalyticsHelper;
 import com.lumigram.messenger.helpers.ComponentsHelper;
+import com.lumigram.messenger.plugins.PluginManager;
 
 public class ApplicationLoader extends Application {
 
@@ -359,6 +360,7 @@ public class ApplicationLoader extends Application {
 
         LauncherIconController.tryFixLauncherIconIfNeeded();
         ProxyRotationController.init();
+        PluginManager.getInstance().initialize(applicationContext);
     }
 
     public static void startPushService() {

@@ -20,7 +20,7 @@ import org.telegram.ui.Components.PopupSwipeBackLayout;
 import java.util.ArrayList;
 
 import com.lumigram.messenger.helpers.UserHelper;
-import com.lumigram.messenger.settings.BaseNekoSettingsActivity;
+import com.lumigram.messenger.settings.BaseLumiSettingsActivity;
 
 public class DatacenterPopupWrapper {
 
@@ -65,7 +65,7 @@ public class DatacenterPopupWrapper {
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
         textView.setTextColor(Theme.getColor(Theme.key_actionBarDefaultSubmenuItem));
         textView.setLinkTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteLinkText));
-        textView.setText(BaseNekoSettingsActivity.getSpannedString(R.string.DatacenterStatusAbout, "https://core.telegram.org/api/datacenter"));
+        textView.setText(BaseLumiSettingsActivity.getSpannedString(R.string.DatacenterStatusAbout, "https://core.telegram.org/api/datacenter"));
         windowLayout.addView(textView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 0, 0, 0, 8, 0, 0));
     }
 

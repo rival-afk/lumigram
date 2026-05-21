@@ -63,7 +63,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Timer;
 
-import com.lumigram.messenger.settings.NekoGeneralSettingsActivity;
+import com.lumigram.messenger.settings.LumiGeneralSettingsActivity;
 
 public class LanguageSelectActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 
@@ -287,7 +287,7 @@ public class LanguageSelectActivity extends BaseFragment implements Notification
 //                            .show();
 //                            return;
 //                    }
-                    presentFragment(new NekoGeneralSettingsActivity());
+                    presentFragment(new LumiGeneralSettingsActivity());
                     return;
                 }
                 if (getParentActivity() == null || parentLayout == null || !(view instanceof TextRadioCell)) {

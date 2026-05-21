@@ -31,7 +31,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipException;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class FileLoadOperation {
 
@@ -288,11 +288,11 @@ public class FileLoadOperation {
     }
 
     private void updateParams() {
-        if ((NekoConfig.downloadSpeedBoost == NekoConfig.BOOST_AVERAGE || preloadPrefixSize > 0 || MessagesController.getInstance(currentAccount).getfileExperimentalParams) && !forceSmallChunk) {
+        if ((LumiConfig.downloadSpeedBoost == LumiConfig.BOOST_AVERAGE || preloadPrefixSize > 0 || MessagesController.getInstance(currentAccount).getfileExperimentalParams) && !forceSmallChunk) {
             downloadChunkSizeBig = 1024 * 512;
             maxDownloadRequests = 8;
             maxDownloadRequestsBig = 8;
-        } else if (NekoConfig.downloadSpeedBoost == NekoConfig.BOOST_EXTREME) {
+        } else if (LumiConfig.downloadSpeedBoost == LumiConfig.BOOST_EXTREME) {
             downloadChunkSizeBig = 1024 * 1024;
             maxDownloadRequests = 12;
             maxDownloadRequestsBig = 12;

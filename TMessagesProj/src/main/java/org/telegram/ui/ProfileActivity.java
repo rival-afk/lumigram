@@ -339,11 +339,11 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import com.lumigram.messenger.BackButtonMenuRecent;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.SimpleTextViewSwitcher;
 import com.lumigram.messenger.helpers.PopupHelper;
 import com.lumigram.messenger.helpers.remote.ConfigHelper;
-import com.lumigram.messenger.settings.NekoSettingsActivity;
+import com.lumigram.messenger.settings.LumiSettingsActivity;
 import com.lumigram.messenger.translator.Translator;
 import me.vkryl.android.animator.BoolAnimator;
 
@@ -633,8 +633,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     private int settingsSectionRow;
     private int settingsSectionRow2;
     private int notificationRow;
-    private int nekoRow;
-    private int nekoSectionRow;
+    private int lumiRow;
+    private int lumiSectionRow;
     private int languageRow;
     private int privacyRow;
     private int dataRow;
@@ -4497,8 +4497,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 });
                 builder1.setNegativeButton(LocaleController.getString(R.string.Cancel), null);
                 showDialog(builder1.create());
-            } else if (position == nekoRow) {
-                presentFragment(new NekoSettingsActivity());
+            } else if (position == lumiRow) {
+                presentFragment(new LumiSettingsActivity());
             } else if (position == languageRow) {
                 presentFragment(new LanguageSelectActivity());
             } else if (position == setUsernameRow) {
@@ -5600,7 +5600,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 return false;
             }
         };
-        idTextView.setVisibility(NekoConfig.idType == NekoConfig.ID_TYPE_HIDDEN ? View.GONE : View.VISIBLE);
+        idTextView.setVisibility(LumiConfig.idType == LumiConfig.ID_TYPE_HIDDEN ? View.GONE : View.VISIBLE);
         idTextView.setFactory(() -> {
             SimpleTextView view = new SimpleTextView(context);
             view.setTextColor(applyPeerColor(getThemedColor(Theme.key_actionBarDefaultSubtitle), true, false));
@@ -8806,7 +8806,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 mediaCounterTextView.setTranslationY(onlineY);
                 updateCollectibleHint();
 
-                if (NekoConfig.idType != NekoConfig.ID_TYPE_HIDDEN && !searchMode) {
+                if (LumiConfig.idType != LumiConfig.ID_TYPE_HIDDEN && !searchMode) {
                     idTextView.setAlpha(diff);
                     idTextView.setTag(diff);
                     if (diff == 0) {
@@ -10448,8 +10448,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         settingsSectionRow = -1;
         settingsSectionRow2 = -1;
         notificationRow = -1;
-        nekoRow = -1;
-        nekoSectionRow = -1;
+        lumiRow = -1;
+        lumiSectionRow = -1;
         languageRow = -1;
         premiumRow = -1;
         starsRow = -1;
@@ -10605,8 +10605,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
 
                 settingsSectionRow = rowCount++;
 
-                nekoRow = rowCount++;
-                nekoSectionRow = rowCount++;
+                lumiRow = rowCount++;
+                lumiSectionRow = rowCount++;
 
                 Set<String> suggestions = getMessagesController().pendingSuggestions;
                 if (suggestions.contains("PREMIUM_GRACE")) {
@@ -12579,7 +12579,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         nameTextView[1].setVisibility(View.VISIBLE);
         onlineTextView[1].setVisibility(View.VISIBLE);
         onlineTextView[3].setVisibility(View.VISIBLE);
-        if (NekoConfig.idType != NekoConfig.ID_TYPE_HIDDEN) idTextView.setVisibility(View.VISIBLE);
+        if (LumiConfig.idType != LumiConfig.ID_TYPE_HIDDEN) idTextView.setVisibility(View.VISIBLE);
 
         actionBar.onSearchFieldVisibilityChanged(searchTransitionProgress > 0.5f);
         int itemVisibility = searchTransitionProgress > 0.5f ? View.VISIBLE : View.GONE;
@@ -12705,7 +12705,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         nameTextView[1].setVisibility(hide);
         onlineTextView[1].setVisibility(hide);
         onlineTextView[3].setVisibility(hide);
-        if (NekoConfig.idType != NekoConfig.ID_TYPE_HIDDEN) idTextView.setVisibility(hide);
+        if (LumiConfig.idType != LumiConfig.ID_TYPE_HIDDEN) idTextView.setVisibility(hide);
 
         if (otherItem != null) {
             otherItem.setAlpha(1f);
@@ -13800,7 +13800,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         textCell.setText(LocaleController.getString(R.string.ReportUserLocation), false);
                         textCell.setColors(-1, Theme.key_text_RedRegular);
                         textCell.setColors(-1, Theme.key_text_RedRegular);
-                    } else if (position == nekoRow) {
+                    } else if (position == lumiRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.NekoSettings), R.drawable.msg_settings, false);
                     } else if (position == languageRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString(R.string.Language), LocaleController.getCurrentLanguageName(), false, R.drawable.msg2_language, false);
@@ -14250,7 +14250,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         public boolean isEnabled(RecyclerView.ViewHolder holder) {
             if (notificationRow != -1) {
                 int position = holder.getAdapterPosition();
-                return position == nekoRow || position == notificationRow || position == numberRow || position == privacyRow ||
+                return position == lumiRow || position == notificationRow || position == numberRow || position == privacyRow ||
                         position == languageRow || position == setUsernameRow || position == bioRow ||
                         position == versionRow || position == dataRow || position == chatRow ||
                         position == questionRow || position == devicesRow || position == filtersRow || position == stickersRow ||
@@ -14294,7 +14294,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 return VIEW_TYPE_TEXT_DETAIL_MULTILINE_2;
             } else if (position == userInfoRow || position == channelInfoRow || position == bioRow) {
                 return VIEW_TYPE_ABOUT_LINK;
-            } else if (position == nekoRow || position == settingsTimerRow || position == settingsKeyRow || position == reportRow || position == reportReactionRow ||
+            } else if (position == lumiRow || position == settingsTimerRow || position == settingsKeyRow || position == reportRow || position == reportReactionRow ||
                     position == subscribersRow || position == subscribersRequestsRow || position == administratorsRow || position == settingsRow || position == blockedUsersRow ||
                     position == addMemberRow || position == joinRow || position == unblockRow ||
                     position == sendMessageRow || position == notificationRow || position == privacyRow ||
@@ -14313,7 +14313,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 return VIEW_TYPE_NOTIFICATIONS_CHECK;
             } else if (position == notificationsSimpleRow) {
                 return VIEW_TYPE_NOTIFICATIONS_CHECK_SIMPLE;
-            } else if (position == lastSectionRow || position == membersSectionRow || position == nekoSectionRow ||
+            } else if (position == lastSectionRow || position == membersSectionRow || position == lumiSectionRow ||
                     position == secretSettingsSectionRow || position == settingsSectionRow || position == devicesSectionRow ||
                     position == helpSectionCell || position == setAvatarSectionRow || position == passwordSuggestionSectionRow ||
                     position == phoneSuggestionSectionRow || position == premiumSectionsRow || position == reportDividerRow ||
@@ -15655,8 +15655,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             put(++pointer, settingsSectionRow, sparseIntArray);
             put(++pointer, settingsSectionRow2, sparseIntArray);
             put(++pointer, notificationRow, sparseIntArray);
-            put(++pointer, nekoRow, sparseIntArray);
-            put(++pointer, nekoSectionRow, sparseIntArray);
+            put(++pointer, lumiRow, sparseIntArray);
+            put(++pointer, lumiSectionRow, sparseIntArray);
             put(++pointer, languageRow, sparseIntArray);
             put(++pointer, premiumRow, sparseIntArray);
             put(++pointer, starsRow, sparseIntArray);
@@ -15755,7 +15755,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     }
 
     private void updateIdText(boolean showDate, boolean animated, boolean chatFull) {
-        if (idTextView == null || NekoConfig.idType == NekoConfig.ID_TYPE_HIDDEN) {
+        if (idTextView == null || LumiConfig.idType == LumiConfig.ID_TYPE_HIDDEN) {
             return;
         }
         if (!showDate && isPulledDown && (!animated || chatFull)) {
@@ -15779,7 +15779,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             } else if (chatId != 0) {
                 var chat = getMessagesController().getChat(chatId);
                 if (chat == null) return;
-                if (NekoConfig.idType == NekoConfig.ID_TYPE_BOTAPI) {
+                if (LumiConfig.idType == LumiConfig.ID_TYPE_BOTAPI) {
                     if (ChatObject.isChannel(chat)) {
                         id = -1000000000000L - chat.id;
                     } else {

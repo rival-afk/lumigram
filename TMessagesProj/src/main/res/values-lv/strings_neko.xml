@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko iestatījumi</string>
+    <string name="NekoSettings">Lumigram iestatījumi</string>
     <string name="MessageMenu">Ziņu izvēlne</string>
     <string name="HidePhone">Paslēpt manu tālruņa numuru</string>
     <string name="DeleteAllFromSelf">Dzēst savus ziņojumus</string>
@@ -179,14 +179,14 @@
     <string name="TabletMode">Planšetdatora režīms</string>
     <string name="TabletModeAuto">Auto</string>
     <string name="DeleteAllFromSelfDone">Visi jūsu ziņojumi tiek dzēsti</string>
-    <string name="UnknownNekoSettingsOption">Šādas opcijas Neko iestatījumi nav.</string>
+    <string name="UnknownNekoSettingsOption">Šādas opcijas Lumigram iestatījumi nav.</string>
     <string name="ProviderYouDaoTranslate">YouDao tulkotājs</string>
     <string name="ProviderBaiduTranslate">Baidu tulkotājs</string>
     <string name="ProviderSogouTranslate">Sogou tulkot</string>
     <string name="Translated">tulkojums</string>
     <string name="PasscodeNeeded">Vispirms jāaktivizē piekļuves koda bloķēšana</string>
     <string name="PasscodeNeko">Pieejas kods</string>
-    <string name="PasscodeShowInSettings">Rādīt Neko iestatījumos</string>
+    <string name="PasscodeShowInSettings">Rādīt Lumigram iestatījumos</string>
     <string name="PasscodeShowInSettingsAbout">Pēc paslēpšanas varat **TIKAI** atvērt šo lapu, izmantojot saiti:</string>
     <string name="PasscodeSet">Iestatīt piekļuves kodu</string>
     <string name="PasscodeEdit">Mainīt piekļuves kodu</string>

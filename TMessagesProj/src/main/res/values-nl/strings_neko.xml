@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko Instellingen</string>
+    <string name="NekoSettings">Lumigram Instellingen</string>
     <string name="MessageMenu">Menu berichten</string>
     <string name="HidePhone">Mijn telefoonnummer verbergen</string>
     <string name="DeleteAllFromSelf">Eigen berichten verwijderen</string>
@@ -138,14 +138,14 @@
     <string name="RestrictionReason">Reden voor beperking</string>
     <string name="MaxRecentStickers">Max. aantal recente stickers</string>
     <string name="DisableJumpToNextChannel">Schakel \"Ga naar het volgende kanaal\" uit</string>
-    <string name="UnknownNekoSettingsOption">Er is geen soortgelijke Neko-instelling.</string>
+    <string name="UnknownNekoSettingsOption">Er is geen soortgelijke Lumigram-instelling.</string>
     <string name="ProviderYouDaoTranslate">YouDao Vertaler</string>
     <string name="ProviderBaiduTranslate">Baidu Vertaler</string>
     <string name="ProviderSogouTranslate">Sogou Vertaler</string>
     <string name="Translated">vertaald</string>
     <string name="PasscodeNeeded">Je moet eerst de toegangscode vergrendeling inschakelen</string>
     <string name="PasscodeNeko">Toegangscode</string>
-    <string name="PasscodeShowInSettings">Weergeven in Neko-instellingen</string>
+    <string name="PasscodeShowInSettings">Weergeven in Lumigram-instellingen</string>
     <string name="PasscodeShowInSettingsAbout">Na het verbergen kan je deze pagina **ALLEEN** openen via een link:</string>
     <string name="PasscodeSet">Stel toegangscode in</string>
     <string name="PasscodeEdit">Toegangscode wijzigen</string>

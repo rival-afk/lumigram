@@ -31,7 +31,7 @@ import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.MotionBackgroundDrawable;
 import org.telegram.ui.Stories.recorder.HintView2;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.MessageHelper;
 
 @SuppressLint("ViewConstructor")
@@ -146,7 +146,7 @@ public class StickerSizePreviewMessagesCell extends LinearLayout {
     private void showTimeHint(ChatMessageCell cell) {
         if (cell == null || cell.timeLayout == null || cell.getMessageObject() == null ||
                 cell.getMessageObject().messageOwner == null ||
-                (NekoConfig.hideTimeOnSticker && cell.getMessageObject().isAnyKindOfSticker())
+                (LumiConfig.hideTimeOnSticker && cell.getMessageObject().isAnyKindOfSticker())
         ) {
             return;
         }

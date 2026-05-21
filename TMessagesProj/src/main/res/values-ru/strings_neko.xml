@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Настройки Neko</string>
+    <string name="NekoSettings">Настройки Lumigram</string>
     <string name="PreferIPv6">Предпочитать подключение через IPv6</string>
     <string name="MessageMenu">Меню сообщений</string>
     <string name="HidePhone">Скрыть мой номер телефона</string>
@@ -65,7 +65,7 @@
     <string name="Donate">Поддержать Lumigram</string>
     <string name="DonateAbout">Поддержите разработку проекта.</string>
     <string name="TranslationAbout">Помогите перевести Lumigram на ваш язык.</string>
-    <string name="Translation">Помочь перевести Neko</string>
+    <string name="Translation">Помочь перевести Lumigram</string>
     <string name="GooglePlay">Google Play</string>
     <string name="ResetStickerSize">Сбросить размер стикера</string>
     <string name="OfficialChannelUsername">nekoupdates</string>
@@ -184,14 +184,14 @@
     <string name="TabletMode">Режим планшета</string>
     <string name="TabletModeAuto">Автоматически</string>
     <string name="DeleteAllFromSelfDone">Все ваши сообщения удалены</string>
-    <string name="UnknownNekoSettingsOption">Такого параметра Neko нет.</string>
+    <string name="UnknownNekoSettingsOption">Такого параметра Lumigram нет.</string>
     <string name="ProviderYouDaoTranslate">YouDao Translator</string>
     <string name="ProviderBaiduTranslate">Baidu Translate</string>
     <string name="ProviderSogouTranslate">Sogou Translate</string>
     <string name="Translated">переведено</string>
     <string name="PasscodeNeeded">Сначала необходимо включить код-пароль</string>
     <string name="PasscodeNeko">Код-пароль</string>
-    <string name="PasscodeShowInSettings">Показать в настройках Neko</string>
+    <string name="PasscodeShowInSettings">Показать в настройках Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">После скрытия, вы можете открыть эту страницу **ТОЛЬКО** по ссылке:</string>
     <string name="PasscodeSet">Установить код-пароль</string>
     <string name="PasscodeEdit">Изменить код-пароль</string>
@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">Стандартная</string>
     <string name="NavigationAnimationSpring">Обычная</string>
     <string name="CloudConfig">Облачные настройки</string>
-    <string name="CloudConfigDesc">Сохранить ваши настройки Neko в облачном хранилище Telegram.</string>
-    <string name="CloudConfigSyncDate">Последняя синхронизация: %s, в облаке: %s</string>
+    <string name="CloudConfigDesc">Сохранить ваши настройки Lumigram в облачном хранилище Telegram.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Последняя синхронизация: %s, в облаке: %s</string>
     <string name="CloudConfigSyncDateNever">никогда</string>
     <string name="CloudConfigSync">Синхронизировать с облаком</string>
     <string name="CloudConfigSyncShort">Синхронизировать</string>
@@ -282,7 +282,7 @@
     <string name="CloudConfigRestoreShort">Восстановить</string>
     <string name="CloudConfigSyncing">Синхронизация...</string>
     <string name="CloudConfigAutoSync">Автосинхронизация</string>
-    <string name="CloudConfigAutoSyncDesc">Автоматическая синхронизация с облаком после изменения настроек Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Автоматическая синхронизация с облаком после изменения настроек Lumigram.</string>
     <string name="CloudConfigSyncFailed">Не удалось синхронизировать настройки с облаком.</string>
     <string name="CloudConfigRestoreFailed">Не удалось восстановить настройки из облака.</string>
     <string name="ReducedColors">Уменьшить количество цветов</string>

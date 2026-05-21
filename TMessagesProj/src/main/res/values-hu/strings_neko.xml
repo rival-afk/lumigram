@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko Beállítások</string>
+    <string name="NekoSettings">Lumigram Beállítások</string>
     <string name="PreferIPv6">IPv6-on keresztül történő csatlakozás előnyben részesítése</string>
     <string name="MessageMenu">Üzenet menü</string>
     <string name="HidePhone">Saját telefonszám elrejtése</string>
@@ -187,14 +187,14 @@
     <string name="TabletMode">Tablet üzemmód</string>
     <string name="TabletModeAuto">Automata</string>
     <string name="DeleteAllFromSelfDone">Az összes üzenete törlődik</string>
-    <string name="UnknownNekoSettingsOption">Nincs ilyen Neko Beállítások opció.</string>
+    <string name="UnknownNekoSettingsOption">Nincs ilyen Lumigram Beállítások opció.</string>
     <string name="ProviderYouDaoTranslate">YouDao Fordító</string>
     <string name="ProviderBaiduTranslate">Baidu Fordító</string>
     <string name="ProviderSogouTranslate">Sogou Fordító</string>
     <string name="Translated">lefordítva</string>
     <string name="PasscodeNeeded">Először engedélyeznie kell a jelszó zárolást</string>
     <string name="PasscodeNeko">Jelszó</string>
-    <string name="PasscodeShowInSettings">Megjelenítés a Neko beállításaiban</string>
+    <string name="PasscodeShowInSettings">Megjelenítés a Lumigram beállításaiban</string>
     <string name="PasscodeShowInSettingsAbout">Az elrejtés után **KIZÁRÓLAG** a linkre kattintva nyithatja meg az oldalt:</string>
     <string name="PasscodeSet">Jelszó beállítása</string>
     <string name="PasscodeEdit">Jelszó módosítása</string>
@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">Klasszikus</string>
     <string name="NavigationAnimationSpring">Természetes</string>
     <string name="CloudConfig">Felhő beállítások</string>
-    <string name="CloudConfigDesc">A Neko beállítások elmentése a Telegram felhőbe.</string>
-    <string name="CloudConfigSyncDate">Utoljára szinkronizálva: %s, felhő: %s</string>
+    <string name="CloudConfigDesc">A Lumigram beállítások elmentése a Telegram felhőbe.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Utoljára szinkronizálva: %s, felhő: %s</string>
     <string name="CloudConfigSyncDateNever">soha</string>
     <string name="CloudConfigSync">Szinkronizálás a felhővel</string>
     <string name="CloudConfigSyncShort">Szinkronizálás</string>
@@ -282,7 +282,7 @@
     <string name="CloudConfigRestoreShort">Visszaállítás</string>
     <string name="CloudConfigSyncing">Szinkronizálás...</string>
     <string name="CloudConfigAutoSync">Automatikus szinkronizálás</string>
-    <string name="CloudConfigAutoSyncDesc">Automatikus szinkronizálás a felhővel a Neko beállítások módosítása után.</string>
+    <string name="CloudConfigAutoSyncDesc">Automatikus szinkronizálás a felhővel a Lumigram beállítások módosítása után.</string>
     <string name="CloudConfigSyncFailed">Sikertelen a beállítások szinkronizálása a felhővel.</string>
     <string name="CloudConfigRestoreFailed">A beállításokat nem sikerült visszaállítani a felhőből.</string>
     <string name="ReducedColors">Színek csökkentése</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">การตั้งค่า Neko</string>
+    <string name="NekoSettings">การตั้งค่า Lumigram</string>
     <string name="PreferIPv6">ขอเชื่อมต่อผ่าน IPv6</string>
     <string name="MessageMenu">เมนูข้อความ</string>
     <string name="HidePhone">ซ่อนหมายเลขโทรศัพท์ของฉัน</string>
@@ -186,14 +186,14 @@
     <string name="TabletMode">โหมดแท็บเล็ต</string>
     <string name="TabletModeAuto">อัตโนมัติ</string>
     <string name="DeleteAllFromSelfDone">ข้อความทั้งหมดของคุณถูกลบออกแล้ว</string>
-    <string name="UnknownNekoSettingsOption">ไม่มีตัวเลือกการตั้งค่า Neko ดังกล่าว</string>
+    <string name="UnknownNekoSettingsOption">ไม่มีตัวเลือกการตั้งค่า Lumigram ดังกล่าว</string>
     <string name="ProviderYouDaoTranslate">YouDao Translator</string>
     <string name="ProviderBaiduTranslate">Baidu Translate</string>
     <string name="ProviderSogouTranslate">Sogou Translate</string>
     <string name="Translated">แปลแล้ว</string>
     <string name="PasscodeNeeded">คุณจะต้องเปิดใช้งานการล็อครหัสผ่านก่อน</string>
     <string name="PasscodeNeko">รหัสผ่าน</string>
-    <string name="PasscodeShowInSettings">แสดงในการตั้งค่า Neko</string>
+    <string name="PasscodeShowInSettings">แสดงในการตั้งค่า Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">หลังจากซ่อนแล้ว คุณสามารถ **เปิดหน้านี้ได้** โดยใช้ลิงก์เท่านั้น:</string>
     <string name="PasscodeSet">ตั้งรหัสผ่าน</string>
     <string name="PasscodeEdit">เปลี่ยนรหัสผ่าน</string>
@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">คลาสสิก</string>
     <string name="NavigationAnimationSpring">เป็นธรรมชาติ</string>
     <string name="CloudConfig">การตั้งค่าคลาวด์</string>
-    <string name="CloudConfigDesc">บันทึกการตั้งค่า Neko ของคุณไปยังคลาวด์ Telegram</string>
-    <string name="CloudConfigSyncDate">ซิงค์ล่าสุด: %s, คลาวด์: %s</string>
+    <string name="CloudConfigDesc">บันทึกการตั้งค่า Lumigram ของคุณไปยังคลาวด์ Telegram</string>
+    <string name="CloudConfigSyncDate" formatted="false">ซิงค์ล่าสุด: %s, คลาวด์: %s</string>
     <string name="CloudConfigSyncDateNever">ไม่เคย</string>
     <string name="CloudConfigSync">ซิงค์ไปยังคลาวด์</string>
     <string name="CloudConfigSyncShort">ซิงค์</string>
@@ -282,7 +282,7 @@
     <string name="CloudConfigRestoreShort">คืนค่า</string>
     <string name="CloudConfigSyncing">กำลังซิงค์...</string>
     <string name="CloudConfigAutoSync">การซิงค์อัตโนมัติ</string>
-    <string name="CloudConfigAutoSyncDesc">ซิงค์ไปยังคลาวด์โดยอัตโนมัติหลังจากทำการเปลี่ยนแปลงการตั้งค่า Neko</string>
+    <string name="CloudConfigAutoSyncDesc">ซิงค์ไปยังคลาวด์โดยอัตโนมัติหลังจากทำการเปลี่ยนแปลงการตั้งค่า Lumigram</string>
     <string name="CloudConfigSyncFailed">ไม่สามารถซิงค์การตั้งค่าไปยังคลาวด์ได้</string>
     <string name="CloudConfigRestoreFailed">ไม่สามารถคืนค่าการตั้งค่าจากคลาวด์ได้</string>
     <string name="ReducedColors">ลดสี</string>

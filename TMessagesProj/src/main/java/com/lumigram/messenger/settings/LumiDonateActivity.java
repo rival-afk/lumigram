@@ -57,7 +57,7 @@ import java.util.stream.Collectors;
 
 import com.lumigram.messenger.helpers.remote.ConfigHelper;
 
-public class NekoDonateActivity extends BaseNekoSettingsActivity implements PurchasesUpdatedListener {
+public class LumiDonateActivity extends BaseLumiSettingsActivity implements PurchasesUpdatedListener {
     private static final List<String> SKUS = Arrays.asList("donate001", "donate002", "donate005", "donate010", "donate020", "donate050", "donate100");
     private final List<ConfigHelper.Crypto> cryptos = ConfigHelper.getCryptos();
 

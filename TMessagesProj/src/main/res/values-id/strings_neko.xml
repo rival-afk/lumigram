@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Pengaturan Neko</string>
+    <string name="NekoSettings">Pengaturan Lumigram</string>
     <string name="PreferIPv6">Prefer connecting through IPv6</string>
     <string name="MessageMenu">Menu pesan</string>
     <string name="HidePhone">Sembunyikan nomor telepon saya</string>
@@ -185,14 +185,14 @@
     <string name="TabletMode">Mode tablet</string>
     <string name="TabletModeAuto">Otomatis</string>
     <string name="DeleteAllFromSelfDone">Semua pesan Anda telah dihapus</string>
-    <string name="UnknownNekoSettingsOption">There is no such Neko Settings option.</string>
+    <string name="UnknownNekoSettingsOption">There is no such Lumigram Settings option.</string>
     <string name="ProviderYouDaoTranslate">Penerjemah YouDao</string>
     <string name="ProviderBaiduTranslate">Penerjemah Baidu</string>
     <string name="ProviderSogouTranslate">Penerjemah Sogou</string>
     <string name="Translated">diterjemahkan</string>
     <string name="PasscodeNeeded">Anda harus mengaktifkan sandi terlebih dahulu</string>
     <string name="PasscodeNeko">Sandi</string>
-    <string name="PasscodeShowInSettings">Tampilkan di Pengaturan Neko</string>
+    <string name="PasscodeShowInSettings">Tampilkan di Pengaturan Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Setelah disembunyikan, Anda dapat **HANYA** membuka halaman ini dengan tautan:</string>
     <string name="PasscodeSet">Atur sandi</string>
     <string name="PasscodeEdit">Ganti sandi</string>
@@ -268,8 +268,8 @@
     <string name="NavigationAnimationBezier">Klasik</string>
     <string name="NavigationAnimationSpring">Natural</string>
     <string name="CloudConfig">Pengaturan cloud</string>
-    <string name="CloudConfigDesc">Simpan pengaturan Neko anda ke Telegram cloud.</string>
-    <string name="CloudConfigSyncDate">Terakhir disinkronkan: %s, cloud: %s</string>
+    <string name="CloudConfigDesc">Simpan pengaturan Lumigram anda ke Telegram cloud.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Terakhir disinkronkan: %s, cloud: %s</string>
     <string name="CloudConfigSyncDateNever">tidak pernah</string>
     <string name="CloudConfigSync">Sinkronkan ke cloud</string>
     <string name="CloudConfigSyncShort">Sinkronisasi</string>
@@ -277,7 +277,7 @@
     <string name="CloudConfigRestoreShort">Pulihkan</string>
     <string name="CloudConfigSyncing">Menyinkronkan...</string>
     <string name="CloudConfigAutoSync">Sinkronkan otomatis</string>
-    <string name="CloudConfigAutoSyncDesc">Otomatis sinkronkan ke cloud setelah membuat perubahan pada pengaturan Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Otomatis sinkronkan ke cloud setelah membuat perubahan pada pengaturan Lumigram.</string>
     <string name="CloudConfigSyncFailed">Gagal menyinkronkan pengaturan ke cloud.</string>
     <string name="CloudConfigRestoreFailed">Gagal memulihkan pengaturan dari cloud.</string>
     <string name="MonoCode">Kode</string>

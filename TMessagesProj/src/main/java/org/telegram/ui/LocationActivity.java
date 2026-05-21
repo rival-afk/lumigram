@@ -127,8 +127,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import com.lumigram.messenger.NekoConfig;
-import com.lumigram.messenger.location.NekoLocationSource;
+import com.lumigram.messenger.LumiConfig;
+import com.lumigram.messenger.location.LumiLocationSource;
 
 public class LocationActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 
@@ -2315,8 +2315,8 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
         for (int i = providers.size() - 1; i >= 0; i--) {
             l = lm.getLastKnownLocation(providers.get(i));
             if (l != null) {
-                if (NekoConfig.mapDriftingFix) {
-                    NekoLocationSource.transform(l);
+                if (LumiConfig.mapDriftingFix) {
+                    LumiLocationSource.transform(l);
                 }
                 break;
             }

@@ -67,7 +67,7 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class VoIPHelper {
 
@@ -108,7 +108,7 @@ public class VoIPHelper {
 			return;
 		}
 
-		if (NekoConfig.askBeforeCall && !confirmed && activity instanceof LaunchActivity) {
+		if (LumiConfig.askBeforeCall && !confirmed && activity instanceof LaunchActivity) {
 			final BaseFragment lastFragment = ((LaunchActivity) activity).getActionBarLayout().getLastFragment();
 			if (lastFragment != null) {
 				AlertsCreator.createCallDialogAlert(lastFragment, lastFragment.getMessagesController().getUser(user.id), videoCall);

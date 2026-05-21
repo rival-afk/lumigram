@@ -39,12 +39,12 @@ import java.util.Scanner;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class CloudSettingsHelper {
     private static final int CONFIG_VERSION = 0;
 
-    private final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekocloud", Context.MODE_PRIVATE);
+    private final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("lumicloud", Context.MODE_PRIVATE);
     private final long[] cloudSyncedDate = new long[UserConfig.MAX_ACCOUNT_COUNT];
     private final Handler handler = new Handler();
     private final Runnable cloudSyncRunnable = () -> CloudSettingsHelper.getInstance().syncToCloud((success, error) -> {
@@ -96,7 +96,7 @@ public class CloudSettingsHelper {
         syncedDate.setText(formatSyncedDate(), false);
 
         var storageHelper = getCloudStorageHelper();
-        storageHelper.getItem("neko_settings_updated_at", (res, error) -> {
+        storageHelper.getItem("lumi_settings_updated_at", (res, error) -> {
             if (error == null && AndroidUtilities.isNumeric(res)) {
                 cloudSyncedDate[selectedAccount] = Long.parseLong(res);
             } else {
@@ -166,12 +166,12 @@ public class CloudSettingsHelper {
     }
 
     private void syncToCloud(Utilities.Callback2<Boolean, String> callback) {
-        String rawConfig = NekoConfig.exportConfigs();
+        String rawConfig = LumiConfig.exportConfigs();
         String compressed = encodeConfig(rawConfig);
-        getCloudStorageHelper().setItem("neko_settings", rawConfig.length() >= compressed.length() ? compressed : rawConfig, (res, error) -> {
+        getCloudStorageHelper().setItem("lumi_settings", rawConfig.length() >= compressed.length() ? compressed : rawConfig, (res, error) -> {
             if (error == null) {
                 localSyncedDate = cloudSyncedDate[UserConfig.selectedAccount] = System.currentTimeMillis();
-                getCloudStorageHelper().setItem("neko_settings_updated_at", String.valueOf(localSyncedDate), null);
+                getCloudStorageHelper().setItem("lumi_settings_updated_at", String.valueOf(localSyncedDate), null);
                 preferences.edit().putLong("updated_at", localSyncedDate).apply();
                 callback.run(true, null);
             } else {
@@ -181,7 +181,7 @@ public class CloudSettingsHelper {
     }
 
     private void restoreFromCloud(Utilities.Callback2<Boolean, String> callback) {
-        getCloudStorageHelper().getItem("neko_settings", (res, error) -> {
+        getCloudStorageHelper().getItem("lumi_settings", (res, error) -> {
             if (error == null) {
                 if (TextUtils.isEmpty(res)) {
                     callback.run(false, "EMPTY_CONFIG");
@@ -191,7 +191,7 @@ public class CloudSettingsHelper {
                         callback.run(false, "DECODE_FAILED");
                     } else {
                         try {
-                            NekoConfig.importConfigs(config);
+                            LumiConfig.importConfigs(config);
                             localSyncedDate = System.currentTimeMillis();
                             preferences.edit().putLong("updated_at", localSyncedDate).apply();
                             callback.run(true, null);

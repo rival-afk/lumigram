@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.lumigram.messenger.Extra;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class ConfigHelper extends BaseRemoteHelper {
     private static final String NEWS_METHOD = "get_config";
@@ -64,7 +64,7 @@ public class ConfigHelper extends BaseRemoteHelper {
         }
         ArrayList<News> newsItems = new ArrayList<>();
         config.news.forEach(news -> {
-            if (news.mcc != null && news.mcc != NekoConfig.userMcc) {
+            if (news.mcc != null && news.mcc != LumiConfig.userMcc) {
                 return;
             }
             if (news.direct != null && news.direct && !Extra.isDirectApp()) {

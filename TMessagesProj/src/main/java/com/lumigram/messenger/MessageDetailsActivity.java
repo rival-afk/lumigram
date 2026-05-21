@@ -42,9 +42,9 @@ import java.util.Locale;
 import com.lumigram.messenger.helpers.MessageHelper;
 import com.lumigram.messenger.helpers.UserHelper;
 import com.lumigram.messenger.helpers.WebAppHelper;
-import com.lumigram.messenger.settings.BaseNekoSettingsActivity;
+import com.lumigram.messenger.settings.BaseLumiSettingsActivity;
 
-public class MessageDetailsActivity extends BaseNekoSettingsActivity implements NotificationCenter.NotificationCenterDelegate {
+public class MessageDetailsActivity extends BaseLumiSettingsActivity implements NotificationCenter.NotificationCenterDelegate {
 
     private final MessageObject messageObject;
     private final boolean noforwards;

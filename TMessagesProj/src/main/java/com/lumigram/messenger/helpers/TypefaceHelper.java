@@ -24,7 +24,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class TypefaceHelper {
 
@@ -137,7 +137,7 @@ public class TypefaceHelper {
 
     public static boolean isMediumWeightSupported() {
         if (mediumWeightSupported == null) {
-            mediumWeightSupported = !NekoConfig.forceFontWeightFallback && testTypeface(createTypeface(500, false));
+            mediumWeightSupported = !LumiConfig.forceFontWeightFallback && testTypeface(createTypeface(500, false));
             FileLog.d("mediumWeightSupported = " + mediumWeightSupported);
         }
         return mediumWeightSupported;

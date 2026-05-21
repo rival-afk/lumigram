@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Налаштування Neko</string>
+    <string name="NekoSettings">Налаштування Lumigram</string>
     <string name="PreferIPv6">Надавати перевагу підключенню через IPv6</string>
     <string name="MessageMenu">Меню повідомлення</string>
     <string name="HidePhone">Приховати мій номер телефону</string>
@@ -183,14 +183,14 @@
     <string name="TabletMode">Режим планшету</string>
     <string name="TabletModeAuto">Авто</string>
     <string name="DeleteAllFromSelfDone">Видалити свої повідомлення</string>
-    <string name="UnknownNekoSettingsOption">Немає такої опції Налаштування Neko.</string>
+    <string name="UnknownNekoSettingsOption">Немає такої опції Налаштування Lumigram.</string>
     <string name="ProviderYouDaoTranslate">YouDao Перекладач</string>
     <string name="ProviderBaiduTranslate">Baidu Перекласти</string>
     <string name="ProviderSogouTranslate">Sogou Перекласти</string>
     <string name="Translated">перекладено</string>
     <string name="PasscodeNeeded">Спочатку потрібно ввімкнути блокування паролем</string>
     <string name="PasscodeNeko">Пароль</string>
-    <string name="PasscodeShowInSettings">Показати в налаштуваннях Neko</string>
+    <string name="PasscodeShowInSettings">Показати в налаштуваннях Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Після приховування, ви можете відкрити **ЛИШЕ** цю сторінку за посиланням:</string>
     <string name="PasscodeSet">Встановити пароль</string>
     <string name="PasscodeEdit">Змінити пароль</string>
@@ -272,8 +272,8 @@
     <string name="NavigationAnimationBezier">Класична</string>
     <string name="NavigationAnimationSpring">Природна</string>
     <string name="CloudConfig">Налаштування хмарного сховища</string>
-    <string name="CloudConfigDesc">Зберігайте ваші налаштування Neko у хмарному сховищі Telegram.</string>
-    <string name="CloudConfigSyncDate">Остання синхронізація %s, хмара: %s</string>
+    <string name="CloudConfigDesc">Зберігайте ваші налаштування Lumigram у хмарному сховищі Telegram.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Остання синхронізація %s, хмара: %s</string>
     <string name="CloudConfigSyncDateNever">ніколи</string>
     <string name="CloudConfigSync">Зберегти до хмари</string>
     <string name="CloudConfigSyncShort">Зберегти</string>
@@ -281,7 +281,7 @@
     <string name="CloudConfigRestoreShort">Відновити</string>
     <string name="CloudConfigSyncing">Виконується синхронізація...</string>
     <string name="CloudConfigAutoSync">Автосинхронізація</string>
-    <string name="CloudConfigAutoSyncDesc">Автоматична синхронізація з хмарою після кожної зміни налаштувань Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Автоматична синхронізація з хмарою після кожної зміни налаштувань Lumigram.</string>
     <string name="CloudConfigSyncFailed">Не вдалося зберегти налаштування до хмарного сховища.</string>
     <string name="CloudConfigRestoreFailed">Не вдалося відновити налаштування з хмарного сховища.</string>
     <string name="ReducedColors">Приглушити кольори</string>

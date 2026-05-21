@@ -25,7 +25,7 @@ import org.telegram.ui.web.BotWebViewContainer;
 import java.util.function.Consumer;
 
 import com.lumigram.messenger.Extra;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class WebAppHelper {
     public static final int INTERNAL_BOT_TLV = 1;
@@ -125,16 +125,16 @@ public class WebAppHelper {
         var event = eventObject.get("event").getAsString();
         if (event.equals("get_config")) {
             var data = new JsonObject();
-            data.addProperty("trust", !NekoConfig.shouldNOTTrustMe);
+            data.addProperty("trust", !LumiConfig.shouldNOTTrustMe);
             eventCallback.accept(warpInEvent("config", data).toString());
         } else if (event.equals("set_config")) {
             var data = eventObject.get("data").getAsJsonObject();
-            SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+            SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("lumiconfig", Activity.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
             switch (data.get("key").getAsString()) {
                 case "trust":
-                    NekoConfig.shouldNOTTrustMe = !data.get("value").getAsBoolean();
-                    editor.putBoolean("shouldNOTTrustMe", NekoConfig.shouldNOTTrustMe);
+                    LumiConfig.shouldNOTTrustMe = !data.get("value").getAsBoolean();
+                    editor.putBoolean("shouldNOTTrustMe", LumiConfig.shouldNOTTrustMe);
                     break;
             }
             editor.apply();

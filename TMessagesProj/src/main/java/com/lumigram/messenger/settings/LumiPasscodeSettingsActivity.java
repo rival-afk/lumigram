@@ -38,7 +38,7 @@ import java.util.Locale;
 
 import com.lumigram.messenger.helpers.PasscodeHelper;
 
-public class NekoPasscodeSettingsActivity extends BaseNekoSettingsActivity {
+public class LumiPasscodeSettingsActivity extends BaseLumiSettingsActivity {
     private boolean passcodeSet;
 
     private final int showInSettingsRow = rowId++;
@@ -75,7 +75,7 @@ public class NekoPasscodeSettingsActivity extends BaseNekoSettingsActivity {
                 ClipboardManager clipboard = (ClipboardManager) ApplicationLoader.applicationContext.getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("label", link);
                 clipboard.setPrimaryClip(clip);
-                BulletinFactory.of(NekoPasscodeSettingsActivity.this).createCopyLinkBulletin().show();
+                BulletinFactory.of(LumiPasscodeSettingsActivity.this).createCopyLinkBulletin().show();
             }
         }, stringBuilder.length() - link.length(), stringBuilder.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         items.add(UItem.asShadow(stringBuilder).setEnabled(passcodeSet));

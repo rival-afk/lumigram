@@ -183,14 +183,14 @@
     <string name="TabletMode">Λειτουργία tablet</string>
     <string name="TabletModeAuto">Αυτόματα</string>
     <string name="DeleteAllFromSelfDone">Όλα τα μηνύματά σας έχουν διαγραφεί</string>
-    <string name="UnknownNekoSettingsOption">Δεν υπάρχει τέτοια επιλογή Ρυθμίσεων Neko.</string>
+    <string name="UnknownNekoSettingsOption">Δεν υπάρχει τέτοια επιλογή Ρυθμίσεων Lumigram.</string>
     <string name="ProviderYouDaoTranslate">YouDao</string>
     <string name="ProviderBaiduTranslate">Baidu</string>
     <string name="ProviderSogouTranslate">Sogou</string>
     <string name="Translated">μεταφράστηκε</string>
     <string name="PasscodeNeeded">Πρώτα ενεργοποιήστε το κλείδωμα με κωδικό</string>
     <string name="PasscodeNeko">Κωδικός</string>
-    <string name="PasscodeShowInSettings">Εμφάνιση στις ρυθμίσεις Neko</string>
+    <string name="PasscodeShowInSettings">Εμφάνιση στις ρυθμίσεις Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Μετά την απόκρυψη, μπορείτε να ανοίξετε αυτή τη σελίδα **ΜΟΝΟ** μέσω συνδέσμου:</string>
     <string name="PasscodeSet">Ορισμός κωδικού</string>
     <string name="PasscodeEdit">Αλλαγή κωδικού</string>
@@ -270,8 +270,8 @@
     <string name="NavigationAnimationBezier">Κλασική</string>
     <string name="NavigationAnimationSpring">Φυσική</string>
     <string name="CloudConfig">Ρυθμίσεις Cloud</string>
-    <string name="CloudConfigDesc">Αποθήκευση ρυθμίσεων Neko στο Telegram cloud.</string>
-    <string name="CloudConfigSyncDate">Τελευταίος συγχρονισμός: %s, cloud: %s</string>
+    <string name="CloudConfigDesc">Αποθήκευση ρυθμίσεων Lumigram στο Telegram cloud.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Τελευταίος συγχρονισμός: %s, cloud: %s</string>
     <string name="CloudConfigSyncDateNever">ποτέ</string>
     <string name="CloudConfigSync">Συγχρονισμός στο cloud</string>
     <string name="CloudConfigSyncShort">Συγχρονισμός</string>
@@ -279,7 +279,7 @@
     <string name="CloudConfigRestoreShort">Επαναφορά</string>
     <string name="CloudConfigSyncing">Συγχρονισμός...</string>
     <string name="CloudConfigAutoSync">Αυτόματος συγχρονισμός</string>
-    <string name="CloudConfigAutoSyncDesc">Συγχρονισμός στο cloud αυτόματα μετά τις αλλαγές στις ρυθμίσεις του Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Συγχρονισμός στο cloud αυτόματα μετά τις αλλαγές στις ρυθμίσεις του Lumigram.</string>
     <string name="CloudConfigSyncFailed">Αποτυχία συγχρονισμού ρυθμίσεων στο cloud.</string>
     <string name="CloudConfigRestoreFailed">Αποτυχία επαναφοράς ρυθμίσεων από το cloud.</string>
     <string name="ReducedColors">Μείωση χρωμάτων</string>

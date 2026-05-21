@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Nastavení Neko</string>
+    <string name="NekoSettings">Nastavení Lumigram</string>
     <string name="MessageMenu">Меню повідомлень</string>
     <string name="HidePhone">Приховати мій номер телефону</string>
     <string name="DeleteAllFromSelf">Видалити власні повідомлення</string>
@@ -139,8 +139,8 @@
     <string name="OfficialSite">Oficiální web stránky</string>
     <string name="MutualContact">Vzájemný kontakt</string>
     <string name="MutualContactDescription">Tento kontakt je vzájemný.</string>
-    <string name="InviteTextNeko">TextPozvánkyNeko</string>
-    <string name="ShareLumigram">PodílNekoGram...</string>
+    <string name="InviteTextNeko">TextPozvánkyLumigram</string>
+    <string name="ShareLumigram">PodílLumigram...</string>
     <string name="LumigramVersion">VerzeLumigram</string>
     <string name="UpdateInstalling">InstalaceAktualizace</string>
     <string name="UpdateInstallingNotification">UpozorněníNaInstalaciAktualizace</string>

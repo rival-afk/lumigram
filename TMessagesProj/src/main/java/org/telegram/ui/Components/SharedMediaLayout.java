@@ -175,7 +175,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.forward.ForwardContext;
 import com.lumigram.messenger.forward.ForwardDrawable;
 import com.lumigram.messenger.forward.ForwardItem;
@@ -2226,7 +2226,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
                 forwardItem.setOnClickListener(v -> onActionBarItemClick(v, forward));
                 forwardItem.setDelegate(id -> onActionBarItemClick(forwardItem, id));
 
-                if (NekoConfig.showNoQuoteForward) {
+                if (LumiConfig.showNoQuoteForward) {
                     forwardNoQuoteItem = new ActionBarMenuItem(context, null, getThemedColor(Theme.key_actionBarActionModeDefaultSelector), getThemedColor(Theme.key_actionBarActionModeDefaultIcon), false);
                     forwardNoQuoteItem.setIcon(R.drawable.msg_forward);
                     forwardNoQuoteItem.setContentDescription(LocaleController.getString(R.string.NoQuoteForward));
@@ -5309,7 +5309,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
             }
             ForwardItem.setLastForwardOption(id);
             setForwardParams(id == forward_noquote, id == forward_nocaption);
-            if (NekoConfig.quickForward) {
+            if (LumiConfig.quickForward) {
                 openShareAlert(profileActivity, null, () -> {
                     for (int a = 1; a >= 0; a--) {
                         selectedFiles[a].clear();

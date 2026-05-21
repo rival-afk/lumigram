@@ -47,7 +47,7 @@ import com.lumigram.messenger.helpers.CloudSettingsHelper;
 import com.lumigram.messenger.helpers.PasscodeHelper;
 import com.lumigram.messenger.helpers.remote.ConfigHelper;
 
-public class NekoSettingsActivity extends BaseNekoSettingsActivity implements FactorAnimator.Target {
+public class LumiSettingsActivity extends BaseLumiSettingsActivity implements FactorAnimator.Target {
 
     private static final int ANIMATOR_ID_SEARCH_PAGE_VISIBLE = 0;
 
@@ -199,23 +199,23 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
         }
         var id = item.id;
         if (id == chatRow) {
-            presentFragment(new NekoChatSettingsActivity());
+            presentFragment(new LumiChatSettingsActivity());
         } else if (id == generalRow) {
-            presentFragment(new NekoGeneralSettingsActivity());
+            presentFragment(new LumiGeneralSettingsActivity());
         } else if (id == appearanceRow) {
-            presentFragment(new NekoAppearanceSettingsActivity());
+            presentFragment(new LumiAppearanceSettingsActivity());
         } else if (id == passcodeRow) {
-            presentFragment(new NekoPasscodeSettingsActivity());
+            presentFragment(new LumiPasscodeSettingsActivity());
         } else if (id == experimentRow) {
-            presentFragment(new NekoExperimentalSettingsActivity());
+            presentFragment(new LumiExperimentalSettingsActivity());
         } else if (id == accessibilityRow) {
             presentFragment(new AccessibilitySettingsActivity());
         } else if (id == channelRow) {
             getMessagesController().openByUserName(LocaleController.getString(R.string.OfficialChannelUsername), this, 1);
         } else if (id == donateRow) {
-            presentFragment(new NekoDonateActivity());
+            presentFragment(new LumiDonateActivity());
         } else if (id == translationRow) {
-            Browser.openUrl(getParentActivity(), "https://neko.crowdin.com/nekogram");
+            Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram");
         } else if (id == websiteRow) {
             Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram");
         } else if (id == sourceCodeRow) {
@@ -268,17 +268,17 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
         return !animatorSearchPageVisible.getValue();
     }
 
-    private static BaseNekoSettingsActivity createFragment(int icon) {
+    private static BaseLumiSettingsActivity createFragment(int icon) {
         if (icon == R.drawable.msg_media) {
-            return new NekoGeneralSettingsActivity();
+            return new LumiGeneralSettingsActivity();
         } else if (icon == R.drawable.msg_theme) {
-            return new NekoAppearanceSettingsActivity();
+            return new LumiAppearanceSettingsActivity();
         } else if (icon == R.drawable.msg_discussion) {
-            return new NekoChatSettingsActivity();
+            return new LumiChatSettingsActivity();
         } else if (icon == R.drawable.msg_fave) {
-            return new NekoExperimentalSettingsActivity();
+            return new LumiExperimentalSettingsActivity();
         }
-        return new NekoSettingsActivity();
+        return new LumiSettingsActivity();
     }
 
     private ArrayList<SearchResult> createSearchArray() {
@@ -315,7 +315,7 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
             searchResultList.add(new SearchResult(10000 + i, fragmentTitle, icon, () -> presentFragment(fragment)));
         }
         searchResultList.add(new SearchResult(8000, LocaleController.getString(R.string.EmojiUseDefault), null, LocaleController.getString(R.string.Chat), LocaleController.getString(R.string.EmojiSets), R.drawable.msg_theme, () -> {
-            var fragment = new NekoEmojiSettingsActivity();
+            var fragment = new LumiEmojiSettingsActivity();
             presentFragment(fragment);
             AndroidUtilities.runOnUIThread(() -> fragment.scrollToRow("useSystemEmoji", () -> {
             }));
@@ -324,8 +324,8 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
         searchResultList.add(new SearchResult(20000, LocaleController.getString(R.string.OfficialChannel), "@" + LocaleController.getString(R.string.OfficialChannelUsername), R.drawable.msg2_help, () -> getMessagesController().openByUserName(LocaleController.getString(R.string.OfficialChannelUsername), this, 1)));
         searchResultList.add(new SearchResult(20001, LocaleController.getString(R.string.OfficialSite), "github.com/rival-afk/lumigram", R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram")));
         searchResultList.add(new SearchResult(20002, LocaleController.getString(R.string.ViewSourceCode), "GitHub", R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram")));
-        searchResultList.add(new SearchResult(20003, LocaleController.getString(R.string.Translation), LocaleController.getString(R.string.TranslationAbout), R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://neko.crowdin.com/nekogram")));
-        searchResultList.add(new SearchResult(20004, LocaleController.getString(R.string.Donate), LocaleController.getString(R.string.DonateAbout), R.drawable.msg2_help, () -> presentFragment(new NekoDonateActivity())));
+        searchResultList.add(new SearchResult(20003, LocaleController.getString(R.string.Translation), LocaleController.getString(R.string.TranslationAbout), R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram")));
+        searchResultList.add(new SearchResult(20004, LocaleController.getString(R.string.Donate), LocaleController.getString(R.string.DonateAbout), R.drawable.msg2_help, () -> presentFragment(new LumiDonateActivity())));
 
         return searchResultList;
     }

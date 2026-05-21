@@ -186,7 +186,7 @@
     <string name="Translated">अनुवाद किया जा चुका है</string>
     <string name="PasscodeNeeded">आपको पहले पासकोड लॉक सक्षम करना होगा</string>
     <string name="PasscodeNeko">पासकोड </string>
-    <string name="PasscodeShowInSettings">Neko सेटिंग में दिखाएं</string>
+    <string name="PasscodeShowInSettings">Lumigram सेटिंग में दिखाएं</string>
     <string name="PasscodeShowInSettingsAbout">छिपाने के बाद, आप इस पेज को **केवल** लिंक द्वारा खोल सकते हैं:</string>
     <string name="PasscodeSet">पासकोड सेट करें</string>
     <string name="PasscodeEdit">पासकोड बदलें</string>

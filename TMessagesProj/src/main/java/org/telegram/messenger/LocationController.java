@@ -39,8 +39,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import com.lumigram.messenger.NekoConfig;
-import com.lumigram.messenger.location.NekoLocationSource;
+import com.lumigram.messenger.LumiConfig;
+import com.lumigram.messenger.location.LumiLocationSource;
 
 @SuppressLint("MissingPermission")
 public class LocationController extends BaseController implements NotificationCenter.NotificationCenterDelegate, ILocationServiceProvider.IAPIConnectionCallbacks, ILocationServiceProvider.IAPIOnConnectionFailedListener {
@@ -529,8 +529,8 @@ public class LocationController extends BaseController implements NotificationCe
         if (location != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && (SystemClock.elapsedRealtimeNanos() - location.getElapsedRealtimeNanos()) / 1000000000 > 60 * 5) {
             return;
         }
-        if (NekoConfig.mapDriftingFix && location != null) {
-            NekoLocationSource.transform(location);
+        if (LumiConfig.mapDriftingFix && location != null) {
+            LumiLocationSource.transform(location);
         }
         lastKnownLocation = location;
         if (lastKnownLocation != null) {

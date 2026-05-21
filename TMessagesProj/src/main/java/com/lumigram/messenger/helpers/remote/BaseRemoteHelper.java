@@ -26,11 +26,11 @@ import java.util.Collections;
 import java.util.List;
 
 import com.lumigram.messenger.Extra;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.InlineBotHelper;
 
 public abstract class BaseRemoteHelper {
-    protected static final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoremoteconfig", Activity.MODE_PRIVATE);
+    protected static final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("lumiremoteconfig", Activity.MODE_PRIVATE);
     public static final Gson GSON = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 
     protected MessagesController getMessagesController() {
@@ -67,7 +67,7 @@ public abstract class BaseRemoteHelper {
                 " " +
                 LocaleController.getSystemLocaleStringIso639() +
                 " " +
-                NekoConfig.userMcc +
+                LumiConfig.userMcc +
                 " " +
                 SharedConfig.pushString;
     }

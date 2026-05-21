@@ -134,7 +134,7 @@ public class LinkManager {
             return handleNewBot(second, segments.size() >= 3 ? segments.get(2) : null, uri.getQueryParameter("name"));
         }
 
-        if ("nekosettings".equals(first)) {
+        if ("lumisettings".equals(first)) {
             SettingsHelper.processDeepLink(uri, this::presentFragment,
                     () -> getBulletinFactory().createErrorBulletin(LocaleController.getString(R.string.UnknownNekoSettingsOption)).show(), progress);
             return true;

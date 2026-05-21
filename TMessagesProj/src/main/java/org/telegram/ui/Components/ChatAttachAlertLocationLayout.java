@@ -91,8 +91,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.lumigram.messenger.NekoConfig;
-import com.lumigram.messenger.location.NekoLocationSource;
+import com.lumigram.messenger.LumiConfig;
+import com.lumigram.messenger.location.LumiLocationSource;
 
 public class ChatAttachAlertLocationLayout extends ChatAttachAlert.AttachAlertLayout implements NotificationCenter.NotificationCenterDelegate {
 
@@ -1566,8 +1566,8 @@ public class ChatAttachAlertLocationLayout extends ChatAttachAlert.AttachAlertLa
         for (int i = providers.size() - 1; i >= 0; i--) {
             l = lm.getLastKnownLocation(providers.get(i));
             if (l != null) {
-                if (NekoConfig.mapDriftingFix) {
-                    NekoLocationSource.transform(l);
+                if (LumiConfig.mapDriftingFix) {
+                    LumiLocationSource.transform(l);
                 }
                 break;
             }

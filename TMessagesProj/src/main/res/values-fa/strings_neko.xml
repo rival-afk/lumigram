@@ -273,8 +273,8 @@
     <string name="NavigationAnimationBezier">کلاسیک</string>
     <string name="NavigationAnimationSpring">عادی</string>
     <string name="CloudConfig">تنظیمات ابری</string>
-    <string name="CloudConfigDesc">تنظیمات Neko خود را در ابر تلگرام ذخیره کنید.</string>
-    <string name="CloudConfigSyncDate">آخرین همگام سازی: %s، ابر: %s</string>
+    <string name="CloudConfigDesc">تنظیمات Lumigram خود را در ابر تلگرام ذخیره کنید.</string>
+    <string name="CloudConfigSyncDate" formatted="false">آخرین همگام سازی: %s، ابر: %s</string>
     <string name="CloudConfigSyncDateNever">هرگز</string>
     <string name="CloudConfigSync">همگام سازی با ابر</string>
     <string name="CloudConfigSyncShort">همگام‌سازی</string>

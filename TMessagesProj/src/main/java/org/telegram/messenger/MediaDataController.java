@@ -106,7 +106,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.EntitiesHelper;
 import com.lumigram.messenger.helpers.MessageFilterHelper;
 
@@ -910,8 +910,8 @@ public class MediaDataController extends BaseController {
         if (type == TYPE_PREMIUM_STICKERS) {
             return new ArrayList<>(recentStickers[type]);
         }
-        ArrayList<TLRPC.Document> result = new ArrayList<>(arrayList.subList(0, Math.min(arrayList.size(), NekoConfig.maxRecentStickers)));
-        if (firstEmpty && !result.isEmpty() && !StickersAlert.DISABLE_STICKER_EDITOR && !NekoConfig.minimizedStickerCreator) {
+        ArrayList<TLRPC.Document> result = new ArrayList<>(arrayList.subList(0, Math.min(arrayList.size(), LumiConfig.maxRecentStickers)));
+        if (firstEmpty && !result.isEmpty() && !StickersAlert.DISABLE_STICKER_EDITOR && !LumiConfig.minimizedStickerCreator) {
             result.add(0, new TLRPC.TL_documentEmpty());
         }
         return result;
@@ -7014,7 +7014,7 @@ public class MediaDataController extends BaseController {
         boolean isPre = false;
         final String mono = "`";
         final String pre = "```";
-        while (!(NekoConfig.newMarkdownParser || EditTextBoldCursor.disableMarkdown) && (index = TextUtils.indexOf(message[0], !isPre ? mono : pre, lastIndex)) != -1) {
+        while (!(LumiConfig.newMarkdownParser || EditTextBoldCursor.disableMarkdown) && (index = TextUtils.indexOf(message[0], !isPre ? mono : pre, lastIndex)) != -1) {
             if (start == -1) {
                 isPre = message[0].length() - index > 2 && message[0].charAt(index + 1) == '`' && message[0].charAt(index + 2) == '`';
                 start = index;
@@ -7100,7 +7100,7 @@ public class MediaDataController extends BaseController {
             entities.add(entity);
         }
 
-        if (!EditTextBoldCursor.disableMarkdown && NekoConfig.newMarkdownParser) EntitiesHelper.parseMarkdown(message, allowStrike);
+        if (!EditTextBoldCursor.disableMarkdown && LumiConfig.newMarkdownParser) EntitiesHelper.parseMarkdown(message, allowStrike);
 
         if (message[0] instanceof Spanned) {
             Spanned spannable = (Spanned) message[0];
@@ -7292,7 +7292,7 @@ public class MediaDataController extends BaseController {
 
         CharSequence cs = message[0];
         if (entities == null) entities = new ArrayList<>();
-        if (NekoConfig.newMarkdownParser || EditTextBoldCursor.disableMarkdown) return entities;
+        if (LumiConfig.newMarkdownParser || EditTextBoldCursor.disableMarkdown) return entities;
         cs = parsePattern(cs, BOLD_PATTERN, entities, obj -> new TLRPC.TL_messageEntityBold());
         cs = parsePattern(cs, ITALIC_PATTERN, entities, obj -> new TLRPC.TL_messageEntityItalic());
         cs = parsePattern(cs, SPOILER_PATTERN, entities, obj -> new TLRPC.TL_messageEntitySpoiler());

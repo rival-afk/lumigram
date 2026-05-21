@@ -16,12 +16,12 @@ import org.telegram.ui.Components.UniversalAdapter;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.PopupHelper;
 import com.lumigram.messenger.translator.Translator;
 import com.lumigram.messenger.translator.TranslatorApps;
 
-public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
+public class LumiGeneralSettingsActivity extends BaseLumiSettingsActivity {
 
     private final int ipv6Row = rowId++;
 
@@ -50,7 +50,7 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
         if (names == null || types == null) {
             return "";
         }
-        int index = types.indexOf(NekoConfig.translationProvider);
+        int index = types.indexOf(LumiConfig.translationProvider);
         if (index < 0) {
             return "";
         } else {
@@ -59,7 +59,7 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
     }
 
     private CharSequence getTranslationTarget() {
-        var language = NekoConfig.translationTarget;
+        var language = LumiConfig.translationTarget;
         CharSequence value;
         if (language.equals("app")) {
             value = LocaleController.getString(R.string.TranslationTargetApp);
@@ -91,9 +91,9 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
     }
 
     private CharSequence getTranslatorType() {
-        return switch (NekoConfig.transType) {
-            case NekoConfig.TRANS_TYPE_TG -> LocaleController.getString(R.string.TranslatorTypeTG);
-            case NekoConfig.TRANS_TYPE_EXTERNAL ->
+        return switch (LumiConfig.transType) {
+            case LumiConfig.TRANS_TYPE_TG -> LocaleController.getString(R.string.TranslatorTypeTG);
+            case LumiConfig.TRANS_TYPE_EXTERNAL ->
                     LocaleController.getString(R.string.TranslatorTypeExternal);
             default -> LocaleController.getString(R.string.TranslatorTypeNeko);
         };
@@ -107,45 +107,45 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
     @Override
     protected void fillItems(ArrayList<UItem> items, UniversalAdapter adapter) {
         items.add(UItem.asHeader(LocaleController.getString(R.string.Connection)));
-        items.add(UItem.asCheck(ipv6Row, LocaleController.getString(R.string.PreferIPv6)).slug("ipv6").setChecked(NekoConfig.preferIPv6));
+        items.add(UItem.asCheck(ipv6Row, LocaleController.getString(R.string.PreferIPv6)).slug("ipv6").setChecked(LumiConfig.preferIPv6));
         items.add(UItem.asShadow(null));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.Translator)));
         items.add(TextSettingsCellFactory.of(translatorTypeRow, LocaleController.getString(R.string.TranslatorType), getTranslatorType()).slug("translatorType"));
-        if (NekoConfig.transType != NekoConfig.TRANS_TYPE_EXTERNAL) {
-            if (NekoConfig.transType == NekoConfig.TRANS_TYPE_NEKO) {
-                items.add(UItem.asCheck(showOriginalRow, LocaleController.getString(R.string.TranslatorShowOriginal)).slug("showOriginalRow").setChecked(NekoConfig.showOriginal));
+        if (LumiConfig.transType != LumiConfig.TRANS_TYPE_EXTERNAL) {
+            if (LumiConfig.transType == LumiConfig.TRANS_TYPE_LUMI) {
+                items.add(UItem.asCheck(showOriginalRow, LocaleController.getString(R.string.TranslatorShowOriginal)).slug("showOriginalRow").setChecked(LumiConfig.showOriginal));
             }
             items.add(TextSettingsCellFactory.of(translationProviderRow, LocaleController.getString(R.string.TranslationProviderShort), getTranslationProvider()).slug("translationProvider"));
             items.add(TextSettingsCellFactory.of(translationTargetRow, LocaleController.getString(R.string.TranslationTarget), getTranslationTarget()).slug("translationTarget"));
             items.add(TextSettingsCellFactory.of(doNotTranslateRow, LocaleController.getString(R.string.DoNotTranslate), getRestrictedLanguages()).slug("doNotTranslate"));
-            items.add(UItem.asCheck(autoTranslateRow, LocaleController.getString(R.string.AutoTranslate), LocaleController.getString(R.string.AutoTranslateAbout)).slug("autoTranslate").setChecked(NekoConfig.autoTranslate));
+            items.add(UItem.asCheck(autoTranslateRow, LocaleController.getString(R.string.AutoTranslate), LocaleController.getString(R.string.AutoTranslateAbout)).slug("autoTranslate").setChecked(LumiConfig.autoTranslate));
         } else {
             items.add(TextSettingsCellFactory.of(translatorExternalAppRow, LocaleController.getString(R.string.TranslationProviderShort), getTranslatorExternalApp()).slug("translatorExternalApp"));
         }
         items.add(UItem.asShadow(LocaleController.getString(R.string.TranslateMessagesInfo1)));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.Notifications)));
-        items.add(UItem.asCheck(accentAsNotificationColorRow, LocaleController.getString(R.string.AccentAsNotificationColor)).slug("accentAsNotificationColor").setChecked(NekoConfig.accentAsNotificationColor));
-        items.add(UItem.asCheck(silenceNonContactsRow, LocaleController.getString(R.string.SilenceNonContacts)).slug("silenceNonContacts").setChecked(NekoConfig.silenceNonContacts));
+        items.add(UItem.asCheck(accentAsNotificationColorRow, LocaleController.getString(R.string.AccentAsNotificationColor)).slug("accentAsNotificationColor").setChecked(LumiConfig.accentAsNotificationColor));
+        items.add(UItem.asCheck(silenceNonContactsRow, LocaleController.getString(R.string.SilenceNonContacts)).slug("silenceNonContacts").setChecked(LumiConfig.silenceNonContacts));
         items.add(UItem.asShadow(LocaleController.getString(R.string.SilenceNonContactsAbout)));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.UserColorTabProfile)));
-        items.add(TextSettingsCellFactory.of(nameOrderRow, LocaleController.getString(R.string.NameOrder), switch (NekoConfig.nameOrder) {
+        items.add(TextSettingsCellFactory.of(nameOrderRow, LocaleController.getString(R.string.NameOrder), switch (LumiConfig.nameOrder) {
             case 2 -> LocaleController.getString(R.string.LastFirst);
             default -> LocaleController.getString(R.string.FirstLast);
         }).slug("nameOrder"));
-        items.add(TextSettingsCellFactory.of(idTypeRow, LocaleController.getString(R.string.IdType), switch (NekoConfig.idType) {
-            case NekoConfig.ID_TYPE_HIDDEN -> LocaleController.getString(R.string.IdTypeHidden);
-            case NekoConfig.ID_TYPE_BOTAPI -> LocaleController.getString(R.string.IdTypeBOTAPI);
+        items.add(TextSettingsCellFactory.of(idTypeRow, LocaleController.getString(R.string.IdType), switch (LumiConfig.idType) {
+            case LumiConfig.ID_TYPE_HIDDEN -> LocaleController.getString(R.string.IdTypeHidden);
+            case LumiConfig.ID_TYPE_BOTAPI -> LocaleController.getString(R.string.IdTypeBOTAPI);
             default -> LocaleController.getString(R.string.IdTypeAPI);
         }).slug("idType"));
         items.add(UItem.asShadow(LocaleController.getString(R.string.IdTypeAbout)));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.General)));
-        items.add(UItem.asCheck(disabledInstantCameraRow, LocaleController.getString(R.string.DisableInstantCamera)).slug("disabledInstantCamera").setChecked(NekoConfig.disableInstantCamera));
-        items.add(UItem.asCheck(askBeforeCallRow, LocaleController.getString(R.string.AskBeforeCalling)).slug("askBeforeCall").setChecked(NekoConfig.askBeforeCall));
-        items.add(UItem.asCheck(openArchiveOnPullRow, LocaleController.getString(R.string.OpenArchiveOnPull)).slug("openArchiveOnPull").setChecked(NekoConfig.openArchiveOnPull));
+        items.add(UItem.asCheck(disabledInstantCameraRow, LocaleController.getString(R.string.DisableInstantCamera)).slug("disabledInstantCamera").setChecked(LumiConfig.disableInstantCamera));
+        items.add(UItem.asCheck(askBeforeCallRow, LocaleController.getString(R.string.AskBeforeCalling)).slug("askBeforeCall").setChecked(LumiConfig.askBeforeCall));
+        items.add(UItem.asCheck(openArchiveOnPullRow, LocaleController.getString(R.string.OpenArchiveOnPull)).slug("openArchiveOnPull").setChecked(LumiConfig.openArchiveOnPull));
         items.add(UItem.asShadow(null));
     }
 
@@ -153,9 +153,9 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
     protected void onItemClick(UItem item, View view, int position, float x, float y) {
         var id = item.id;
         if (id == ipv6Row) {
-            NekoConfig.toggleIPv6();
+            LumiConfig.toggleIPv6();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.preferIPv6);
+                ((TextCheckCell) view).setChecked(LumiConfig.preferIPv6);
             }
             for (int a = 0; a < UserConfig.MAX_ACCOUNT_COUNT; a++) {
                 if (UserConfig.getInstance(a).isClientActivated()) {
@@ -163,9 +163,9 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
                 }
             }
         } else if (id == disabledInstantCameraRow) {
-            NekoConfig.toggleDisabledInstantCamera();
+            LumiConfig.toggleDisabledInstantCamera();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.disableInstantCamera);
+                ((TextCheckCell) view).setChecked(LumiConfig.disableInstantCamera);
             }
         } else if (id == nameOrderRow) {
             ArrayList<String> arrayList = new ArrayList<>();
@@ -174,8 +174,8 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
             types.add(1);
             arrayList.add(LocaleController.getString(R.string.LastFirst));
             types.add(2);
-            PopupHelper.show(arrayList, LocaleController.getString(R.string.NameOrder), types.indexOf(NekoConfig.nameOrder), getParentActivity(), view, i -> {
-                NekoConfig.setNameOrder(types.get(i));
+            PopupHelper.show(arrayList, LocaleController.getString(R.string.NameOrder), types.indexOf(LumiConfig.nameOrder), getParentActivity(), view, i -> {
+                LumiConfig.setNameOrder(types.get(i));
                 item.textValue = arrayList.get(i);
                 listView.adapter.notifyItemChanged(position, PARTIAL);
                 parentLayout.rebuildAllFragmentViews(false, false);
@@ -199,79 +199,79 @@ public class NekoGeneralSettingsActivity extends BaseNekoSettingsActivity {
                 }
             }, resourcesProvider);
         } else if (id == openArchiveOnPullRow) {
-            NekoConfig.toggleOpenArchiveOnPull();
+            LumiConfig.toggleOpenArchiveOnPull();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.openArchiveOnPull);
+                ((TextCheckCell) view).setChecked(LumiConfig.openArchiveOnPull);
             }
         } else if (id == askBeforeCallRow) {
-            NekoConfig.toggleAskBeforeCall();
+            LumiConfig.toggleAskBeforeCall();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.askBeforeCall);
+                ((TextCheckCell) view).setChecked(LumiConfig.askBeforeCall);
             }
         } else if (id == idTypeRow) {
             ArrayList<String> arrayList = new ArrayList<>();
             ArrayList<Integer> types = new ArrayList<>();
             arrayList.add(LocaleController.getString(R.string.IdTypeHidden));
-            types.add(NekoConfig.ID_TYPE_HIDDEN);
+            types.add(LumiConfig.ID_TYPE_HIDDEN);
             arrayList.add(LocaleController.getString(R.string.IdTypeAPI));
-            types.add(NekoConfig.ID_TYPE_API);
+            types.add(LumiConfig.ID_TYPE_API);
             arrayList.add(LocaleController.getString(R.string.IdTypeBOTAPI));
-            types.add(NekoConfig.ID_TYPE_BOTAPI);
-            PopupHelper.show(arrayList, LocaleController.getString(R.string.IdType), types.indexOf(NekoConfig.idType), getParentActivity(), view, i -> {
-                NekoConfig.setIdType(types.get(i));
+            types.add(LumiConfig.ID_TYPE_BOTAPI);
+            PopupHelper.show(arrayList, LocaleController.getString(R.string.IdType), types.indexOf(LumiConfig.idType), getParentActivity(), view, i -> {
+                LumiConfig.setIdType(types.get(i));
                 item.textValue = arrayList.get(i);
                 listView.adapter.notifyItemChanged(position, PARTIAL);
                 parentLayout.rebuildAllFragmentViews(false, false);
             }, resourcesProvider);
         } else if (id == accentAsNotificationColorRow) {
-            NekoConfig.toggleAccentAsNotificationColor();
+            LumiConfig.toggleAccentAsNotificationColor();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.accentAsNotificationColor);
+                ((TextCheckCell) view).setChecked(LumiConfig.accentAsNotificationColor);
             }
         } else if (id == silenceNonContactsRow) {
-            NekoConfig.toggleSilenceNonContacts();
+            LumiConfig.toggleSilenceNonContacts();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.silenceNonContacts);
+                ((TextCheckCell) view).setChecked(LumiConfig.silenceNonContacts);
             }
         } else if (id == translatorTypeRow) {
-            int oldType = NekoConfig.transType;
+            int oldType = LumiConfig.transType;
             Translator.showTranslatorTypeSelector(getParentActivity(), view, () -> {
-                int newType = NekoConfig.transType;
+                int newType = LumiConfig.transType;
                 item.textValue = getTranslatorType();
                 listView.adapter.notifyItemChanged(position, PARTIAL);
                 if (oldType != newType) {
                     int count = 4;
-                    if (oldType == NekoConfig.TRANS_TYPE_NEKO || newType == NekoConfig.TRANS_TYPE_NEKO) {
+                    if (oldType == LumiConfig.TRANS_TYPE_LUMI || newType == LumiConfig.TRANS_TYPE_LUMI) {
                         count++;
                     }
-                    if (oldType == NekoConfig.TRANS_TYPE_EXTERNAL) {
+                    if (oldType == LumiConfig.TRANS_TYPE_EXTERNAL) {
                         notifyItemRemoved(translatorExternalAppRow);
                         updateRows();
                         notifyItemRangeInserted(translationProviderRow, count);
-                    } else if (newType == NekoConfig.TRANS_TYPE_EXTERNAL) {
+                    } else if (newType == LumiConfig.TRANS_TYPE_EXTERNAL) {
                         notifyItemRangeRemoved(translationProviderRow, count);
                         updateRows();
                         notifyItemInserted(translatorExternalAppRow);
-                    } else if (oldType == NekoConfig.TRANS_TYPE_NEKO) {
+                    } else if (oldType == LumiConfig.TRANS_TYPE_LUMI) {
                         notifyItemRemoved(showOriginalRow);
                         updateRows();
-                    } else if (newType == NekoConfig.TRANS_TYPE_NEKO) {
+                    } else if (newType == LumiConfig.TRANS_TYPE_LUMI) {
                         updateRows();
                         notifyItemInserted(showOriginalRow);
                     }
                 }
             }, resourcesProvider);
         } else if (id == doNotTranslateRow) {
-            presentFragment(new NekoLanguagesSelectActivity(NekoLanguagesSelectActivity.TYPE_RESTRICTED));
+            presentFragment(new LumiLanguagesSelectActivity(LumiLanguagesSelectActivity.TYPE_RESTRICTED));
         } else if (id == autoTranslateRow) {
-            NekoConfig.toggleAutoTranslate();
+            LumiConfig.toggleAutoTranslate();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.autoTranslate);
+                ((TextCheckCell) view).setChecked(LumiConfig.autoTranslate);
             }
         } else if (id == showOriginalRow) {
-            NekoConfig.toggleShowOriginal();
+            LumiConfig.toggleShowOriginal();
             if (view instanceof TextCheckCell) {
-                ((TextCheckCell) view).setChecked(NekoConfig.showOriginal);
+                ((TextCheckCell) view).setChecked(LumiConfig.showOriginal);
             }
         } else if (id == translatorExternalAppRow) {
             Translator.showTranslationProviderSelector(getParentActivity(), view, param -> {

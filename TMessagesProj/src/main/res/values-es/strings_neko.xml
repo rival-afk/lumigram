@@ -182,14 +182,14 @@
     <string name="TabletMode">Modo tablet</string>
     <string name="TabletModeAuto">Auto</string>
     <string name="DeleteAllFromSelfDone">Todos tus mensajes han sido borrados</string>
-    <string name="UnknownNekoSettingsOption">No existe esa opción en los Ajustes de Neko.</string>
+    <string name="UnknownNekoSettingsOption">No existe esa opción en los Ajustes de Lumigram.</string>
     <string name="ProviderYouDaoTranslate">Traductor YouDao</string>
     <string name="ProviderBaiduTranslate">Traductor Baidu</string>
     <string name="ProviderSogouTranslate">Traductor Sogou</string>
     <string name="Translated">traducido</string>
     <string name="PasscodeNeeded">Primero tienes que activar el código de bloqueo</string>
     <string name="PasscodeNeko">Código de acceso</string>
-    <string name="PasscodeShowInSettings">Mostrar en Ajustes Neko</string>
+    <string name="PasscodeShowInSettings">Mostrar en Ajustes Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Después de ocultar, puede **SOLO** abrir esta página por enlace:</string>
     <string name="PasscodeSet">Establecer código</string>
     <string name="PasscodeEdit">Cambiar contraseña</string>
@@ -269,8 +269,8 @@
     <string name="NavigationAnimationBezier">Clásica</string>
     <string name="NavigationAnimationSpring">Natural</string>
     <string name="CloudConfig">Ajustes de la nube</string>
-    <string name="CloudConfigDesc">Guarda tus ajustes de Neko en la nube de Telegram.</string>
-    <string name="CloudConfigSyncDate">Última sincronización: %s, nube: %s</string>
+    <string name="CloudConfigDesc">Guarda tus ajustes de Lumigram en la nube de Telegram.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Última sincronización: %s, nube: %s</string>
     <string name="CloudConfigSyncDateNever">nunca</string>
     <string name="CloudConfigSync">Sincronizar a la nube</string>
     <string name="CloudConfigSyncShort">Sincronizar</string>
@@ -278,7 +278,7 @@
     <string name="CloudConfigRestoreShort">Restaurar</string>
     <string name="CloudConfigSyncing">Sincronizando...</string>
     <string name="CloudConfigAutoSync">Auto sincronización</string>
-    <string name="CloudConfigAutoSyncDesc">Sincronizar en la nube automáticamente después de hacer cambios en la configuración de Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Sincronizar en la nube automáticamente después de hacer cambios en la configuración de Lumigram.</string>
     <string name="CloudConfigSyncFailed">Error al sincronizar los ajustes en la nube.</string>
     <string name="CloudConfigRestoreFailed">Error al restaurar los ajustes desde la nube.</string>
     <string name="ReducedColors">Reducir colores</string>

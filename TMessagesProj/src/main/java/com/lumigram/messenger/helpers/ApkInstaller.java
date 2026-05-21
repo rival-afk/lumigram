@@ -50,7 +50,7 @@ import java.io.OutputStream;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public final class ApkInstaller {
     @SuppressLint("StaticFieldLeak")
@@ -279,7 +279,7 @@ public final class ApkInstaller {
                 notificationManager.notify(8732833,
                         new NotificationCompat.Builder(context, "updated")
                                 .setSmallIcon(R.drawable.notification)
-                                .setColor(NekoConfig.getNotificationColor())
+                                .setColor(LumiConfig.getNotificationColor())
                                 .setShowWhen(false)
                                 .setContentText(LocaleController.getString(R.string.UpdateInstalledNotification))
                                 .setCategory(NotificationCompat.CATEGORY_STATUS)

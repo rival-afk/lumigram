@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Налады Neko</string>
+    <string name="NekoSettings">Налады Lumigram</string>
     <string name="PreferIPv6">Аддаваць перавагу падключэнню праз IPv6</string>
     <string name="MessageMenu">Чат</string>
     <string name="HidePhone">Схаваць мой нумар тэлефона</string>
@@ -184,14 +184,14 @@
     <string name="TabletMode">Рэжым планшэту</string>
     <string name="TabletModeAuto">Аўтаматычна</string>
     <string name="DeleteAllFromSelfDone">Усе вашы паведамленні выдалены</string>
-    <string name="UnknownNekoSettingsOption">Такой опцыі ў наладах Neko няма.</string>
+    <string name="UnknownNekoSettingsOption">Такой опцыі ў наладах Lumigram няма.</string>
     <string name="ProviderYouDaoTranslate">YouDao Translator</string>
     <string name="ProviderBaiduTranslate">Baidu Translate</string>
     <string name="ProviderSogouTranslate">Sogou Translate</string>
     <string name="Translated">перакладзена</string>
     <string name="PasscodeNeeded">Спачатку неабходна ўключыць блакіроўку паролям</string>
     <string name="PasscodeNeko">Пароль</string>
-    <string name="PasscodeShowInSettings">Паказаць у наладах Neko</string>
+    <string name="PasscodeShowInSettings">Паказаць у наладах Lumigram</string>
     <string name="PasscodeShowInSettingsAbout">Пасля хавання, вы можаце адкрыць гэтую старонку **ТОЛЬКІ** па спасылцы:</string>
     <string name="PasscodeSet">Устанавіць пароль</string>
     <string name="PasscodeEdit">Змяніць пароль</string>
@@ -271,8 +271,8 @@
     <string name="NavigationAnimationBezier">Класічна</string>
     <string name="NavigationAnimationSpring">Натуральны</string>
     <string name="CloudConfig">Налады воблачнага сховішча</string>
-    <string name="CloudConfigDesc">Захаваць вашы налады Neko у воблачным сховішчы Telegram.</string>
-    <string name="CloudConfigSyncDate">Апошняя сінхранізацыя: %s, у воблаку: %s</string>
+    <string name="CloudConfigDesc">Захаваць вашы налады Lumigram у воблачным сховішчы Telegram.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Апошняя сінхранізацыя: %s, у воблаку: %s</string>
     <string name="CloudConfigSyncDateNever">ніколі</string>
     <string name="CloudConfigSync">Захаваць у воблака</string>
     <string name="CloudConfigSyncShort">Сінхранізаваць</string>
@@ -280,7 +280,7 @@
     <string name="CloudConfigRestoreShort">Аднавіць</string>
     <string name="CloudConfigSyncing">Сінхранізацыя...</string>
     <string name="CloudConfigAutoSync">Аўтасінхранізацыя</string>
-    <string name="CloudConfigAutoSyncDesc">Аўтаматычная сінхранізацыя з воблакам пасля змены налад Neko.</string>
+    <string name="CloudConfigAutoSyncDesc">Аўтаматычная сінхранізацыя з воблакам пасля змены налад Lumigram.</string>
     <string name="CloudConfigSyncFailed">Не атрымалася сінхранізаваць налады з воблакам.</string>
     <string name="CloudConfigRestoreFailed">Не ўдалося аднавіць налады з воблака.</string>
     <string name="ReducedColors">Паменшыць колькасць колераў</string>

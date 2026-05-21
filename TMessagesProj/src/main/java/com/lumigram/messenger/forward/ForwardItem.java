@@ -15,14 +15,14 @@ import org.telegram.ui.ActionBar.Theme;
 import java.util.Arrays;
 import java.util.Collection;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class ForwardItem {
     public static final int ID_FORWARD = -100;
     public static final int ID_FORWARD_NOQUOTE = -101;
     public static final int ID_FORWARD_NOCAPTION = -102;
 
-    private static final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoforward", Context.MODE_PRIVATE);
+    private static final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("lumiforward", Context.MODE_PRIVATE);
     public static int lastForwardOption = preferences.getInt("lastForwardOption", ForwardItem.ID_FORWARD);
 
     static final int[] ITEM_IDS = new int[]{
@@ -106,11 +106,11 @@ public class ForwardItem {
 
     public static int getLastForwardOption(boolean hasCaption) {
         var lastOption = ForwardItem.lastForwardOption;
-        if (NekoConfig.showNoQuoteForward && lastOption == ID_FORWARD_NOQUOTE) {
+        if (LumiConfig.showNoQuoteForward && lastOption == ID_FORWARD_NOQUOTE) {
             return ID_FORWARD;
         }
         if (!hasCaption && lastOption == ID_FORWARD_NOCAPTION) {
-            return NekoConfig.showNoQuoteForward ? ID_FORWARD : ID_FORWARD_NOQUOTE;
+            return LumiConfig.showNoQuoteForward ? ID_FORWARD : ID_FORWARD_NOQUOTE;
         }
         return lastOption;
     }

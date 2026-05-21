@@ -15,7 +15,7 @@ import android.os.IBinder;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class VideoEncodingService extends Service implements NotificationCenter.NotificationCenterDelegate {
 
@@ -136,7 +136,7 @@ public class VideoEncodingService extends Service implements NotificationCenter.
             builder.setWhen(System.currentTimeMillis());
             builder.setChannelId(NotificationsController.OTHER_NOTIFICATIONS_CHANNEL);
             builder.setContentTitle(LocaleController.getString(R.string.AppName));
-            builder.setColor(NekoConfig.getNotificationColor());
+            builder.setColor(LumiConfig.getNotificationColor());
             builder.setCategory(NotificationCompat.CATEGORY_PROGRESS);
         }
         setCurrentMessage(videoConvertMessage);

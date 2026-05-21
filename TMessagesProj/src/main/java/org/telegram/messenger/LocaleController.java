@@ -58,7 +58,7 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class LocaleController {
 
@@ -75,7 +75,7 @@ public class LocaleController {
 
     private volatile FastDateFormat formatterDay;
     public FastDateFormat getFormatterDay() {
-        if (NekoConfig.formatTimeWithSeconds) {
+        if (LumiConfig.formatTimeWithSeconds) {
             return getFormatterDayWithSeconds();
         }
         if (formatterDay == null) {
@@ -2946,7 +2946,7 @@ public class LocaleController {
     }
 
     public static String formatShortNumber(int number, int[] rounded) {
-        if (NekoConfig.disableNumberRounding) {
+        if (LumiConfig.disableNumberRounding) {
             if (rounded != null) {
                 rounded[0] = number;
             }

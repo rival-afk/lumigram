@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko подешавања</string>
+    <string name="NekoSettings">Lumigram подешавања</string>
     <string name="PreferIPv6">Преферирај повезивање путем IPv6</string>
     <string name="MessageMenu">Мени порука</string>
     <string name="HidePhone">Сакриј мој број телефона</string>
@@ -183,14 +183,14 @@
     <string name="TabletMode">Режим таблета</string>
     <string name="TabletModeAuto">Аутоматски</string>
     <string name="DeleteAllFromSelfDone">Све ваше поруке су избрисане</string>
-    <string name="UnknownNekoSettingsOption">Не постоји таква опција у Neko подешавањима.</string>
+    <string name="UnknownNekoSettingsOption">Не постоји таква опција у Lumigram подешавањима.</string>
     <string name="ProviderYouDaoTranslate">YouDao преводилац</string>
     <string name="ProviderBaiduTranslate">Baidu преводилац</string>
     <string name="ProviderSogouTranslate">Sogou преводилац</string>
     <string name="Translated">преведено</string>
     <string name="PasscodeNeeded">Прво морате да омогућите закључавање кодом</string>
     <string name="PasscodeNeko">Кôд</string>
-    <string name="PasscodeShowInSettings">Прикажи у Neko подешавањима</string>
+    <string name="PasscodeShowInSettings">Прикажи у Lumigram подешавањима</string>
     <string name="PasscodeShowInSettingsAbout">Након сакривања, можете отворити ову страницу **САМО** путем везе:</string>
     <string name="PasscodeSet">Подеси кôд</string>
     <string name="PasscodeEdit">Промени кôд</string>
@@ -270,8 +270,8 @@
     <string name="NavigationAnimationBezier">Класична</string>
     <string name="NavigationAnimationSpring">Природна</string>
     <string name="CloudConfig">Подешавања облака</string>
-    <string name="CloudConfigDesc">Сачувајте ваша Neko подешавања у Telegram облак.</string>
-    <string name="CloudConfigSyncDate">Последња синхронизација: %s, облак: %s</string>
+    <string name="CloudConfigDesc">Сачувајте ваша Lumigram подешавања у Telegram облак.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Последња синхронизација: %s, облак: %s</string>
     <string name="CloudConfigSyncDateNever">никада</string>
     <string name="CloudConfigSync">Снхронизуј са облаком</string>
     <string name="CloudConfigSyncShort">Синхронизуј</string>
@@ -279,7 +279,7 @@
     <string name="CloudConfigRestoreShort">Врати</string>
     <string name="CloudConfigSyncing">Синхронизација...</string>
     <string name="CloudConfigAutoSync">Аутоматска синхронизација</string>
-    <string name="CloudConfigAutoSyncDesc">Аутоматскa синхронизaција са облаком након што извршите промене у Neko подешавањима.</string>
+    <string name="CloudConfigAutoSyncDesc">Аутоматскa синхронизaција са облаком након што извршите промене у Lumigram подешавањима.</string>
     <string name="CloudConfigSyncFailed">Није успела синхронизација подешавања са облаком.</string>
     <string name="CloudConfigRestoreFailed">Није успело враћање подешавања из облака.</string>
     <string name="ReducedColors">Смањи боје</string>

@@ -1339,9 +1339,9 @@ public abstract class BotWebViewContainer extends FrameLayout implements Notific
         }
         d("onEventReceived " + eventType);
         switch (eventType) {
-            case "neko_event":{
+            case "lumi_event":{
                 if (Extra.isTrustedBot(botUser.id)) {
-                    WebAppHelper.processBotEvents(delegate, eventData, data -> notifyEvent_fast("neko_event", data));
+                    WebAppHelper.processBotEvents(delegate, eventData, data -> notifyEvent_fast("lumi_event", data));
                 }
             }
             case "web_app_allow_scroll": {

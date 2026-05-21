@@ -181,14 +181,14 @@
     <string name="TabletMode">Tablet modu</string>
     <string name="TabletModeAuto">Otomatik</string>
     <string name="DeleteAllFromSelfDone">Tüm mesajlarınız silindi</string>
-    <string name="UnknownNekoSettingsOption">Böyle bir Neko Ayarlar seçeneği yok.</string>
+    <string name="UnknownNekoSettingsOption">Böyle bir Lumigram Ayarlar seçeneği yok.</string>
     <string name="ProviderYouDaoTranslate">YouDao Çeviri</string>
     <string name="ProviderBaiduTranslate">Baidu Çeviri</string>
     <string name="ProviderSogouTranslate">Sogou Çeviri</string>
     <string name="Translated">çevrildi</string>
     <string name="PasscodeNeeded">Önce uygulama kilidini etkinleştirmelisiniz</string>
     <string name="PasscodeNeko">Parola</string>
-    <string name="PasscodeShowInSettings">Neko Ayarlarında Göster</string>
+    <string name="PasscodeShowInSettings">Lumigram Ayarlarında Göster</string>
     <string name="PasscodeShowInSettingsAbout">Gizledikten sonra, bu sayfayı **YALNIZCA** bağlantıyla açabilirsiniz:</string>
     <string name="PasscodeSet">Parola ayarla</string>
     <string name="PasscodeEdit">Parolayı değiştir</string>
@@ -268,8 +268,8 @@
     <string name="NavigationAnimationBezier">Klasik</string>
     <string name="NavigationAnimationSpring">Doğal</string>
     <string name="CloudConfig">Bulut Ayarları</string>
-    <string name="CloudConfigDesc">Neko Ayarlarınızı Telegram bulutuna kaydedin.</string>
-    <string name="CloudConfigSyncDate">Son senkronize edillme: %s, bulut: %s</string>
+    <string name="CloudConfigDesc">Lumigram Ayarlarınızı Telegram bulutuna kaydedin.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Son senkronize edillme: %s, bulut: %s</string>
     <string name="CloudConfigSyncDateNever">asla</string>
     <string name="CloudConfigSync">Bulut\'a senkronize edin</string>
     <string name="CloudConfigSyncShort">Senkronize et</string>
@@ -277,7 +277,7 @@
     <string name="CloudConfigRestoreShort">Geri Yükle</string>
     <string name="CloudConfigSyncing">Senkronize ediliyor...</string>
     <string name="CloudConfigAutoSync">Otomatik senkronize et</string>
-    <string name="CloudConfigAutoSyncDesc">Neko Ayarlarında değişiklik yaptıktan sonra otomatik olarak buluta senkronize et.</string>
+    <string name="CloudConfigAutoSyncDesc">Lumigram Ayarlarında değişiklik yaptıktan sonra otomatik olarak buluta senkronize et.</string>
     <string name="CloudConfigSyncFailed">Ayarlar buluta senkronize edilemedi.</string>
     <string name="CloudConfigRestoreFailed">Buluttan ayarlar geri yüklenemedi.</string>
     <string name="ReducedColors">Renkleri azaltın</string>

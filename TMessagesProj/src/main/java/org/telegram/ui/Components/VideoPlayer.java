@@ -109,7 +109,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 @SuppressLint("NewApi")
 public class VideoPlayer implements Player.Listener, VideoListener, AnalyticsListener, NotificationCenter.NotificationCenterDelegate {
@@ -437,7 +437,7 @@ public class VideoPlayer implements Player.Listener, VideoListener, AnalyticsLis
     }
 
     public static Quality getSavedQuality(ArrayList<Quality> qualities, MessageObject messageObject) {
-        if (NekoConfig.preferOriginalQuality) {
+        if (LumiConfig.preferOriginalQuality) {
             for (Quality q : qualities) {
                 if (q.original) return q;
             }
@@ -959,7 +959,7 @@ public class VideoPlayer implements Player.Listener, VideoListener, AnalyticsLis
     public static VideoUri getQualityForPlayer(ArrayList<Quality> qualities) {
         for (final Quality q : qualities) {
             for (final VideoUri v : q.uris) {
-                if (v.original && (v.isCached() || NekoConfig.preferOriginalQuality))
+                if (v.original && (v.isCached() || LumiConfig.preferOriginalQuality))
                     return v;
             }
         }

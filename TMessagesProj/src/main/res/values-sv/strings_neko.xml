@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko-inställningar</string>
+    <string name="NekoSettings">Lumigram-inställningar</string>
     <string name="MessageMenu">Meddelandemeny</string>
     <string name="HidePhone">Dölj mitt telefonnummer</string>
     <string name="DeleteAllFromSelf">Radera egna meddelanden</string>
@@ -170,14 +170,14 @@
     <string name="TabletMode">Surfplatteläget</string>
     <string name="TabletModeAuto">Automatiskt</string>
     <string name="DeleteAllFromSelfDone">Alla dina meddelanden är raderade</string>
-    <string name="UnknownNekoSettingsOption">Det finns inget sådant alternativ för Neko-inställningar.</string>
+    <string name="UnknownNekoSettingsOption">Det finns inget sådant alternativ för Lumigram-inställningar.</string>
     <string name="ProviderYouDaoTranslate">YouDao Översättare</string>
     <string name="ProviderBaiduTranslate">Baidu Översätt</string>
     <string name="ProviderSogouTranslate">Sogou Översätt</string>
     <string name="Translated">översatt</string>
     <string name="PasscodeNeeded">Du måste först aktivera lösenordslåset</string>
     <string name="PasscodeNeko">Lösenord</string>
-    <string name="PasscodeShowInSettings">Visa i Neko-inställningar</string>
+    <string name="PasscodeShowInSettings">Visa i Lumigram-inställningar</string>
     <string name="PasscodeShowInSettingsAbout">Efter att ha dolt kan du **ENDAST** öppna den här sidan via en länk:</string>
     <string name="PasscodeSet">Ange lösenord</string>
     <string name="PasscodeEdit">Ändra lösenord</string>

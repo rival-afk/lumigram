@@ -182,7 +182,7 @@
     <string name="TabletMode">태블릿 모드</string>
     <string name="TabletModeAuto">자동</string>
     <string name="DeleteAllFromSelfDone">모든 메세지가 삭제 되었습니다</string>
-    <string name="UnknownNekoSettingsOption">그러한 Neko 설정 옵션이 없습니다.</string>
+    <string name="UnknownNekoSettingsOption">그러한 Lumigram 설정 옵션이 없습니다.</string>
     <string name="ProviderYouDaoTranslate">유다오 번역</string>
     <string name="ProviderBaiduTranslate">바이두 번역</string>
     <string name="ProviderSogouTranslate">소고우 번역</string>
@@ -266,7 +266,7 @@
     <string name="NavigationAnimationSpring">Natural</string>
     <string name="CloudConfig">클라우드 설정</string>
     <string name="CloudConfigDesc">네코 설정을 텔레그램 클라우드에 저장합니다.</string>
-    <string name="CloudConfigSyncDate">마지막 동기화: %s, 클라우드: %s</string>
+    <string name="CloudConfigSyncDate" formatted="false">마지막 동기화: %s, 클라우드: %s</string>
     <string name="CloudConfigSyncDateNever">동기화 안함</string>
     <string name="CloudConfigSync">클라우드에 동기화</string>
     <string name="CloudConfigSyncShort">동기화</string>

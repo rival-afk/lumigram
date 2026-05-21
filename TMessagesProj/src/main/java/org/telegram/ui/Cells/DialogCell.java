@@ -144,7 +144,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Stack;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.accessibility.AccConfig;
 import com.lumigram.messenger.helpers.MessageFilterHelper;
 import me.vkryl.android.animator.BoolAnimator;
@@ -5460,7 +5460,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
     }
 
     public void updateMessageThumbs() {
-        if (message == null || !NekoConfig.mediaPreview) {
+        if (message == null || !LumiConfig.mediaPreview) {
             return;
         }
         String restrictionReason = MessagesController.getInstance(message.currentAccount).getRestrictionReason(message.messageOwner.restriction_reason);

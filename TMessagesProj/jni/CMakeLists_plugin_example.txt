@@ -1,0 +1,37 @@
+# Example CMakeLists.txt for building a C++ Lumigram plugin (.so)
+# Usage:
+#   mkdir build && cd build
+#   cmake .. -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
+#            -DANDROID_ABI=arm64-v8a \
+#            -DANDROID_PLATFORM=android-23 \
+#            -DANDROID_STL=c++_static
+#   make
+
+cmake_minimum_required(VERSION 3.10)
+project(lumigram_plugin_example)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+add_library(plugin SHARED
+    plugin_example.cpp
+)
+
+target_include_directories(plugin PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+if(ANDROID_ABI STREQUAL "arm64-v8a")
+    target_compile_options(plugin PRIVATE -O3 -march=armv8-a+fp+simd)
+elseif(ANDROID_ABI STREQUAL "armeabi-v7a")
+    target_compile_options(plugin PRIVATE -O3 -march=armv7-a -mfloat-abi=softfp -mfpu=neon)
+endif()
+
+target_link_libraries(plugin
+    log
+    android
+)
+
+# Install to expected location for packaging
+install(TARGETS plugin LIBRARY DESTINATION lib/${ANDROID_ABI})

@@ -11,7 +11,7 @@ import org.telegram.tgnet.TLRPC;
 import java.util.ArrayList;
 
 import com.lumigram.messenger.Extra;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class InlineBotHelper extends BaseController {
 
@@ -85,7 +85,7 @@ public class InlineBotHelper extends BaseController {
     }
 
     public static String findBotForText(String s) {
-        if (!NekoConfig.autoInlineBot) return null;
+        if (!LumiConfig.autoInlineBot) return null;
         var text = s.trim();
         if (text.contains(" ")) return null;
         if (text.startsWith("https://x.com/") || text.startsWith("https://twitter.com/")) {

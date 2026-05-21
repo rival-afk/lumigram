@@ -14,14 +14,14 @@ import org.telegram.ui.LaunchActivity;
 import java.util.Locale;
 import java.util.function.Consumer;
 
-import com.lumigram.messenger.settings.BaseNekoSettingsActivity;
-import com.lumigram.messenger.settings.NekoAppearanceSettingsActivity;
-import com.lumigram.messenger.settings.NekoChatSettingsActivity;
-import com.lumigram.messenger.settings.NekoDonateActivity;
-import com.lumigram.messenger.settings.NekoEmojiSettingsActivity;
-import com.lumigram.messenger.settings.NekoExperimentalSettingsActivity;
-import com.lumigram.messenger.settings.NekoGeneralSettingsActivity;
-import com.lumigram.messenger.settings.NekoPasscodeSettingsActivity;
+import com.lumigram.messenger.settings.BaseLumiSettingsActivity;
+import com.lumigram.messenger.settings.LumiAppearanceSettingsActivity;
+import com.lumigram.messenger.settings.LumiChatSettingsActivity;
+import com.lumigram.messenger.settings.LumiDonateActivity;
+import com.lumigram.messenger.settings.LumiEmojiSettingsActivity;
+import com.lumigram.messenger.settings.LumiExperimentalSettingsActivity;
+import com.lumigram.messenger.settings.LumiGeneralSettingsActivity;
+import com.lumigram.messenger.settings.LumiPasscodeSettingsActivity;
 
 public class SettingsHelper {
 
@@ -35,35 +35,35 @@ public class SettingsHelper {
             unknown.run();
             return;
         }
-        BaseNekoSettingsActivity fragment;
+        BaseLumiSettingsActivity fragment;
         var segment = segments.get(1);
         if (PasscodeHelper.getSettingsKey().equals(segment)) {
-            fragment = new NekoPasscodeSettingsActivity();
+            fragment = new LumiPasscodeSettingsActivity();
         } else {
             switch (segment.toLowerCase(Locale.US)) {
                 case "appearance":
                 case "a":
-                    fragment = new NekoAppearanceSettingsActivity();
+                    fragment = new LumiAppearanceSettingsActivity();
                     break;
                 case "chat":
                 case "chats":
                 case "c":
-                    fragment = new NekoChatSettingsActivity();
+                    fragment = new LumiChatSettingsActivity();
                     break;
                 case "donate":
                 case "d":
-                    fragment = new NekoDonateActivity();
+                    fragment = new LumiDonateActivity();
                     break;
                 case "experimental":
                 case "e":
-                    fragment = new NekoExperimentalSettingsActivity();
+                    fragment = new LumiExperimentalSettingsActivity();
                     break;
                 case "emoji":
-                    fragment = new NekoEmojiSettingsActivity();
+                    fragment = new LumiEmojiSettingsActivity();
                     break;
                 case "general":
                 case "g":
-                    fragment = new NekoGeneralSettingsActivity();
+                    fragment = new LumiGeneralSettingsActivity();
                     break;
                 case "reportid":
                     SettingsHelper.copyReportId();

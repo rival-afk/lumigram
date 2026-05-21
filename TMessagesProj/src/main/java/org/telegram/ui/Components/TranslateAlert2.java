@@ -83,7 +83,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.translator.Translator;
 
 public class TranslateAlert2 extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
@@ -1242,7 +1242,7 @@ public class TranslateAlert2 extends BottomSheet implements NotificationCenter.N
             targetLanguages.add(0, "app");
 
             boolean first = true;
-            int checkedItem = targetLanguages.indexOf(NekoConfig.translationTarget);
+            int checkedItem = targetLanguages.indexOf(LumiConfig.translationTarget);
             for (int i = 0; i < targetLanguages.size(); ++i) {
                 String language = targetLanguages.get(i);
                 ActionBarMenuSubItem button = new ActionBarMenuSubItem(getContext(), 2, first, i == targetLanguages.size() - 1, resourcesProvider);
@@ -1641,10 +1641,10 @@ public class TranslateAlert2 extends BottomSheet implements NotificationCenter.N
     }
 
     public static void setToLanguage(String toLang) {
-        NekoConfig.setTranslationTarget(toLang);
+        LumiConfig.setTranslationTarget(toLang);
     }
 
     public static void resetToLanguage() {
-        NekoConfig.setTranslationTarget("app");
+        LumiConfig.setTranslationTarget("app");
     }
 }

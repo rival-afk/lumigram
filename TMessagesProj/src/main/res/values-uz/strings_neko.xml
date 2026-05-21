@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko sozlamalari</string>
+    <string name="NekoSettings">Lumigram sozlamalari</string>
     <string name="MessageMenu">Xabarlar menyusi</string>
     <string name="HidePhone">Telefon raqamimni yashirish</string>
     <string name="DeleteAllFromSelf">Shaxsiy xabarlarni o\'chirish</string>
@@ -181,14 +181,14 @@
     <string name="TabletMode">Ekran rejimi</string>
     <string name="TabletModeAuto">Avto</string>
     <string name="DeleteAllFromSelfDone">Barcha xabarlaringiz o\'chirib tashlandi</string>
-    <string name="UnknownNekoSettingsOption">Boshqa Neko sozlamalari mavjud emas.</string>
+    <string name="UnknownNekoSettingsOption">Boshqa Lumigram sozlamalari mavjud emas.</string>
     <string name="ProviderYouDaoTranslate">YouDao Tarjimon</string>
     <string name="ProviderBaiduTranslate">Baidu Tarjimon</string>
     <string name="ProviderSogouTranslate">Sogou Tarjimon</string>
     <string name="Translated">tarjima qilindi</string>
     <string name="PasscodeNeeded">Avval parolli qulflashni yoqishingiz kerak</string>
     <string name="PasscodeNeko">Parol</string>
-    <string name="PasscodeShowInSettings">Neko sozlamalarida ko\'rsatish</string>
+    <string name="PasscodeShowInSettings">Lumigram sozlamalarida ko\'rsatish</string>
     <string name="PasscodeShowInSettingsAbout">Yashirgandan keyin siz **FAQAT** ushbu sahifani havola orqali ochishingiz mumkin:</string>
     <string name="PasscodeSet">Parol o\'rnatish</string>
     <string name="PasscodeEdit">Parolni almashtirish</string>
@@ -264,8 +264,8 @@
     <string name="NavigationAnimationBezier">Klassik</string>
     <string name="NavigationAnimationSpring">Tabiiy</string>
     <string name="CloudConfig">Bulut Sozlamalari</string>
-    <string name="CloudConfigDesc">Neko sozlamalarini Telegram bulutga saqlash.</string>
-    <string name="CloudConfigSyncDate">Sinxronlandi: %s, bulutga: %s</string>
+    <string name="CloudConfigDesc">Lumigram sozlamalarini Telegram bulutga saqlash.</string>
+    <string name="CloudConfigSyncDate" formatted="false">Sinxronlandi: %s, bulutga: %s</string>
     <string name="CloudConfigSyncDateNever">hech qachon</string>
     <string name="CloudConfigSync">Bulutga sinxronlash</string>
     <string name="CloudConfigSyncShort">Sinxronlash</string>
@@ -273,7 +273,7 @@
     <string name="CloudConfigRestoreShort">Tiklash</string>
     <string name="CloudConfigSyncing">Sinxronlanmoqda...</string>
     <string name="CloudConfigAutoSync">Avto sinxronlash</string>
-    <string name="CloudConfigAutoSyncDesc">Neko sozlamalarini o\'zgartirgach bulutga avtomatik sinxronlash.</string>
+    <string name="CloudConfigAutoSyncDesc">Lumigram sozlamalarini o\'zgartirgach bulutga avtomatik sinxronlash.</string>
     <string name="CloudConfigSyncFailed">Sozlamalarni bulutga sinxronlashda xatolik.</string>
     <string name="CloudConfigRestoreFailed">Sozlamalarni bulutdan tiklashda xatolik.</string>
     <string name="ReducedColors">Ranglarni kamaytirish</string>

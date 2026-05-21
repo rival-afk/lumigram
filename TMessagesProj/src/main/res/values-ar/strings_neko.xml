@@ -273,7 +273,7 @@
     <string name="NavigationAnimationSpring">طبيعي</string>
     <string name="CloudConfig">إعدادات السحابة</string>
     <string name="CloudConfigDesc">حفظ إعدادات نيكو الخاصة بك إلى سحابة تيليجرام.</string>
-    <string name="CloudConfigSyncDate">آخر مزامنة: %s، السحابة: %s</string>
+    <string name="CloudConfigSyncDate" formatted="false">آخر مزامنة: %s، السحابة: %s</string>
     <string name="CloudConfigSyncDateNever">أبداً</string>
     <string name="CloudConfigSync">المزامنة مع السحابة</string>
     <string name="CloudConfigSyncShort">مزامنة</string>

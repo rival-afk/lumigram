@@ -52,7 +52,7 @@ import org.telegram.ui.Components.blur3.source.BlurredBackgroundSourceRenderNode
 import java.util.ArrayList;
 import java.util.Locale;
 
-public abstract class BaseNekoSettingsActivity extends BaseFragment {
+public abstract class BaseLumiSettingsActivity extends BaseFragment {
 
     protected static final Object PARTIAL = new Object();
 
@@ -65,11 +65,11 @@ public abstract class BaseNekoSettingsActivity extends BaseFragment {
 
     protected int rowId = 1;
 
-    public BaseNekoSettingsActivity() {
+    public BaseLumiSettingsActivity() {
         this(null);
     }
 
-    public BaseNekoSettingsActivity(Bundle args) {
+    public BaseLumiSettingsActivity(Bundle args) {
         super(args);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -166,7 +166,7 @@ public abstract class BaseNekoSettingsActivity extends BaseFragment {
 
             @Override
             public Integer getSelectorColor(int position) {
-                return BaseNekoSettingsActivity.this.getSelectorColor(position);
+                return BaseLumiSettingsActivity.this.getSelectorColor(position);
             }
         };
         listView.adapter.setApplyBackground(false);

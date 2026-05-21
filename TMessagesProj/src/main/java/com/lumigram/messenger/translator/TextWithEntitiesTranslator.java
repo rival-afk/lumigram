@@ -16,7 +16,7 @@ import app.nekogram.translator.SogouTranslator;
 import app.nekogram.translator.TranSmartTranslator;
 import app.nekogram.translator.YandexTranslator;
 import app.nekogram.translator.YouDaoTranslator;
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.translator.html.HTMLKeeper;
 
 public class TextWithEntitiesTranslator implements Translator.ITranslator {
@@ -29,7 +29,7 @@ public class TextWithEntitiesTranslator implements Translator.ITranslator {
                 case Translator.PROVIDER_YANDEX -> YandexTranslator.getInstance();
                 case Translator.PROVIDER_LINGO -> LingoTranslator.getInstance();
                 case Translator.PROVIDER_DEEPL -> {
-                    DeepLTranslator.setFormality(NekoConfig.deepLFormality);
+                    DeepLTranslator.setFormality(LumiConfig.deepLFormality);
                     yield DeepLTranslator.getInstance();
                 }
                 case Translator.PROVIDER_MICROSOFT -> MicrosoftTranslator.getInstance();
@@ -51,7 +51,7 @@ public class TextWithEntitiesTranslator implements Translator.ITranslator {
 
     @Override
     public Translator.TranslationResult translate(TLRPC.TL_textWithEntities query, String fl, String tl) throws Exception {
-        if (NekoConfig.keepFormatting) {
+        if (LumiConfig.keepFormatting) {
             var html = HTMLKeeper.entitiesToHtml(query.text, query.entities, false);
             var result = translator.translate(html, null, tl);
             var textAndEntitiesTranslated = HTMLKeeper.htmlToEntities(result.translation, query.entities, false);

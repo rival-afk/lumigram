@@ -32,7 +32,7 @@ public class AnalyticsHelper {
     public static String userId = null;
 
     public static void start(Application application) {
-        preferences = application.getSharedPreferences("nekoanalytics", Application.MODE_PRIVATE);
+        preferences = application.getSharedPreferences("lumianalytics", Application.MODE_PRIVATE);
         analyticsDisabled = !Extra.FORCE_ANALYTICS && preferences.getBoolean("analyticsDisabled", false);
         sendBugReport = Extra.FORCE_ANALYTICS || preferences.getBoolean("sendBugReport", true);
         if (analyticsDisabled) {

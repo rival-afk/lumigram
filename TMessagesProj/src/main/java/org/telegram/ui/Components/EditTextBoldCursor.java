@@ -78,7 +78,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class EditTextBoldCursor extends EditTextEffects {
 
@@ -178,7 +178,7 @@ public class EditTextBoldCursor extends EditTextEffects {
 
     private static Method canUndoMethod;
     private static Method canRedoMethod;
-    public static boolean disableMarkdown = NekoConfig.disableMarkdownByDefault;
+    public static boolean disableMarkdown = LumiConfig.disableMarkdownByDefault;
     private boolean showDisableMarkdown = false;
 
     static {

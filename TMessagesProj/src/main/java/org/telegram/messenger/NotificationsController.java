@@ -97,7 +97,7 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 import com.lumigram.messenger.helpers.MessageFilterHelper;
 import com.lumigram.messenger.helpers.PasscodeHelper;
 
@@ -4312,7 +4312,7 @@ public class NotificationsController extends BaseController {
                 notifyDisabled = true;
             }
 
-            if (NekoConfig.silenceNonContacts && chat == null && getContactsController().contactsDict.get(userId) == null) {
+            if (LumiConfig.silenceNonContacts && chat == null && getContactsController().contactsDict.get(userId) == null) {
                 notifyDisabled = true;
             }
 
@@ -4553,7 +4553,7 @@ public class NotificationsController extends BaseController {
                     .setGroupSummary(true)
                     .setShowWhen(true)
                     .setWhen(((long) lastMessageObject.messageOwner.date) * 1000)
-                    .setColor(NekoConfig.getNotificationColor());
+                    .setColor(LumiConfig.getNotificationColor());
 
             long[] vibrationPattern = null;
             Uri sound = null;
@@ -5527,7 +5527,7 @@ public class NotificationsController extends BaseController {
                     .setContentText(text.toString())
                     .setAutoCancel(true)
                     .setNumber(dialogKey.story ? storyPushMessages.size() : messageObjects.size())
-                    .setColor(NekoConfig.getNotificationColor())
+                    .setColor(LumiConfig.getNotificationColor())
                     .setGroupSummary(false)
                     .setWhen(date)
                     .setShowWhen(true)

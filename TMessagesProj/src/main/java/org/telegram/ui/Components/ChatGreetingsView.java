@@ -49,7 +49,7 @@ import org.telegram.ui.Stories.recorder.HintView2;
 
 import java.util.Locale;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 public class ChatGreetingsView extends LinearLayout {
 
@@ -65,7 +65,7 @@ public class ChatGreetingsView extends LinearLayout {
     public BackupImageView nextStickerToSendView;
     private final Theme.ResourcesProvider resourcesProvider;
     boolean wasDraw;
-    boolean showGreetings = !NekoConfig.disableGreetingSticker;
+    boolean showGreetings = !LumiConfig.disableGreetingSticker;
 
     public ChatGreetingsView(Context context, TLRPC.User user, int currentAccount, TLRPC.Document sticker, Theme.ResourcesProvider resourcesProvider) {
         super(context);

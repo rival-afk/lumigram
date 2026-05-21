@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NekoSettings">Neko Indstillinger</string>
+    <string name="NekoSettings">Lumigram Indstillinger</string>
     <string name="MessageMenu">Meddelelse menu</string>
     <string name="HidePhone">Skjul mit telefonnummer</string>
     <string name="DeleteAllFromSelf">Slet egne beskeder</string>
@@ -174,14 +174,14 @@
     <string name="TabletMode">Tablet-tilstand</string>
     <string name="TabletModeAuto">Auto</string>
     <string name="DeleteAllFromSelfDone">Alle dine beskeder er slettet</string>
-    <string name="UnknownNekoSettingsOption">Der er ikke en sådan indstillingsmulighed for Neko.</string>
+    <string name="UnknownNekoSettingsOption">Der er ikke en sådan indstillingsmulighed for Lumigram.</string>
     <string name="ProviderYouDaoTranslate">YouDao oversætter</string>
     <string name="ProviderBaiduTranslate">Baidu Oversætter</string>
     <string name="ProviderSogouTranslate">Sogou Oversætter</string>
     <string name="Translated">oversat</string>
     <string name="PasscodeNeeded">Du er nødt til at aktivere adgangskode lås først</string>
     <string name="PasscodeNeko">Adgangskode</string>
-    <string name="PasscodeShowInSettings">Vis i Neko-indstillinger</string>
+    <string name="PasscodeShowInSettings">Vis i Lumigram-indstillinger</string>
     <string name="PasscodeShowInSettingsAbout">Når du har skjult siden, kan du **KUN** åbne denne side via et link:</string>
     <string name="PasscodeSet">Indstil adgangskode</string>
     <string name="PasscodeEdit">Skift adgangskode</string>

@@ -143,7 +143,7 @@ import java.util.Set;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import com.lumigram.messenger.helpers.PasscodeHelper;
-import com.lumigram.messenger.settings.NekoSettingsActivity;
+import com.lumigram.messenger.settings.LumiSettingsActivity;
 
 public class SettingsActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, ImageUpdater.ImageUpdaterDelegate, MainTabsActivity.TabFragmentDelegate, FactorAnimator.Target {
 
@@ -865,7 +865,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 break;
             }
             case 50: {
-                presentFragment(new NekoSettingsActivity());
+                presentFragment(new LumiSettingsActivity());
                 break;
             }
         }

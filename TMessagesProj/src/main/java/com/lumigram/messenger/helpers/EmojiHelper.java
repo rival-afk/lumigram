@@ -42,7 +42,7 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import com.lumigram.messenger.NekoConfig;
+import com.lumigram.messenger.LumiConfig;
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
 public class EmojiHelper {
@@ -59,7 +59,7 @@ public class EmojiHelper {
 
     private final HashMap<String, Typeface> typefaceCache = new HashMap<>();
     private final ArrayList<EmojiPack> emojiPacksInfo = new ArrayList<>();
-    private final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoemojis", Context.MODE_PRIVATE);
+    private final SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("lumiemojis", Context.MODE_PRIVATE);
 
     private String emojiPack;
     private Bitmap systemEmojiPreview;
@@ -205,13 +205,13 @@ public class EmojiHelper {
     public void setEmojiPack(String pack, boolean manually) {
         emojiPack = pack;
         preferences.edit().putString("emoji_pack", pack).apply();
-        if (manually && NekoConfig.useSystemEmoji) {
-            NekoConfig.toggleUseSystemEmoji();
+        if (manually && LumiConfig.useSystemEmoji) {
+            LumiConfig.toggleUseSystemEmoji();
         }
     }
 
     public Typeface getCurrentTypeface() {
-        if (NekoConfig.useSystemEmoji) {
+        if (LumiConfig.useSystemEmoji) {
             return getSystemEmojiTypeface();
         } else {
             return getSelectedTypeface();
@@ -245,7 +245,7 @@ public class EmojiHelper {
     }
 
     public String getSelectedPackName() {
-        if (NekoConfig.useSystemEmoji) return "System";
+        if (LumiConfig.useSystemEmoji) return "System";
         return emojiPacksInfo
                 .stream()
                 .filter(emojiPackInfo -> Objects.equals(emojiPackInfo.packId, emojiPack))
