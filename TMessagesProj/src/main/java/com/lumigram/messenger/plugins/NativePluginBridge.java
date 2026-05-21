@@ -12,7 +12,7 @@ public final class NativePluginBridge {
     static {
         boolean libLoaded = false;
         try {
-            System.loadLibrary("lumi");
+            System.loadLibrary("lumi.49");
             libLoaded = true;
         } catch (UnsatisfiedLinkError e) {
             FileLog.d("NativePluginBridge: native library not available");
