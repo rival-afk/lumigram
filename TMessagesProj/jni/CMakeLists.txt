@@ -350,6 +350,7 @@ add_library(${NATIVE_LIB} SHARED
         genann.c
         secureid_ocr.cpp
         tde2e/bridge.cpp
+        lumigram_core.cpp
 )
 
 target_compile_options(${NATIVE_LIB} PUBLIC

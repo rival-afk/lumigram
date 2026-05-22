@@ -39,6 +39,14 @@ static bool loadPluginApi(void *dl_handle, LumigramPluginApi *api) {
     return true;
 }
 
+JNIEXPORT jboolean JNICALL
+Java_com_lumigram_messenger_plugins_NativePluginBridge_nativePing(
+    JNIEnv *env, jclass clazz)
+{
+    LOGI("nativePing called - JNI bridge is alive");
+    return JNI_TRUE;
+}
+
 JNIEXPORT jlong JNICALL
 Java_com_lumigram_messenger_plugins_NativePluginBridge_nativeLoadPlugin(
     JNIEnv *env, jclass clazz,

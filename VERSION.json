@@ -1,0 +1,8 @@
+{
+  "version_name": "12.6.4",
+  "version_code": 6666,
+  "package": "com.lumigram.messenger",
+  "build_date": "2026-05-22",
+  "target_sdk": 36,
+  "min_sdk": 23
+}

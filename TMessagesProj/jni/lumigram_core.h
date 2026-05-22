@@ -28,17 +28,20 @@ typedef struct {
     lumigram_plugin_on_update_t on_update;
 } LumigramPluginApi;
 
-JNIEXPORT jlong Java_com_lumigram_messenger_plugins_PluginManager_00024CppPluginInstance_nativeLoadPlugin(
-    JNIEnv *env, jobject thiz, jstring plugin_path, jstring plugin_id, jstring plugin_version);
+JNIEXPORT jboolean Java_com_lumigram_messenger_plugins_NativePluginBridge_nativePing(
+    JNIEnv *env, jclass clazz);
 
-JNIEXPORT jboolean Java_com_lumigram_messenger_plugins_PluginManager_00024CppPluginInstance_nativeCallOnLoad(
-    JNIEnv *env, jobject thiz, jlong handle);
+JNIEXPORT jlong Java_com_lumigram_messenger_plugins_NativePluginBridge_nativeLoadPlugin(
+    JNIEnv *env, jclass clazz, jstring plugin_path, jstring plugin_id, jstring plugin_version);
 
-JNIEXPORT jboolean Java_com_lumigram_messenger_plugins_PluginManager_00024CppPluginInstance_nativeCallOnUnload(
-    JNIEnv *env, jobject thiz, jlong handle);
+JNIEXPORT jboolean Java_com_lumigram_messenger_plugins_NativePluginBridge_nativeCallOnLoad(
+    JNIEnv *env, jclass clazz, jlong handle);
 
-JNIEXPORT void Java_com_lumigram_messenger_plugins_PluginManager_00024CppPluginInstance_nativeUnloadPlugin(
-    JNIEnv *env, jobject thiz, jlong handle);
+JNIEXPORT jboolean Java_com_lumigram_messenger_plugins_NativePluginBridge_nativeCallOnUnload(
+    JNIEnv *env, jclass clazz, jlong handle);
+
+JNIEXPORT void Java_com_lumigram_messenger_plugins_NativePluginBridge_nativeUnloadPlugin(
+    JNIEnv *env, jclass clazz, jlong handle);
 
 #ifdef __cplusplus
 }
