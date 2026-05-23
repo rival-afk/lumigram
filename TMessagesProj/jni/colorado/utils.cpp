@@ -1,3 +1,5 @@
+#include <cerrno>
+#include <cstddef>
 #include <string>
 #include <unistd.h>
 

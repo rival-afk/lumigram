@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "agent": {
+    "build": {
+      "description": "Build Lumigram APK (arm64-v8a debug)",
+      "mode": "subagent",
+      "permission": { "bash": "allow" },
+      "prompt": "Run the gradle build for Lumigram. Build command: ./gradlew assembleDebug. Only build arm64-v8a (abi split in app/build.gradle). Targets: TMessagesProj_App:assembleDebug. Do NOT run lint or test tasks unless asked. If build fails, analyze the error and fix it before retrying."
+    }
+  },
+  "command": {
+    "build": {
+      "description": "Build Lumigram APK (arm64-v8a debug)",
+      "prompt": "Run ./gradlew assembleDebug to build Lumigram APK. Only arm64-v8a is included per app build.gradle config."
+    },
+    "test": {
+      "description": "Run unit tests for plugins",
+      "prompt": "Run ./gradlew :TMessagesProj_AppTests:testDebugUnitTest to execute plugin unit tests."
+    },
+    "rebuild-native": {
+      "description": "Rebuild only native C++ libraries",
+      "prompt": "Run ./gradlew :TMessagesProj:externalNativeBuildDebug to rebuild only the native .so libraries (CMake)."
+    }
+  }
+}
