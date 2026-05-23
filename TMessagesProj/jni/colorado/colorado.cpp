@@ -8,10 +8,6 @@
 #include "obfs-string.h"
 #include "utils.h"
 
-void kill_self() {
-    kill(getpid(), SIGKILL);
-}
-
 bool check_signature() {
     return true;
 }
