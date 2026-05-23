@@ -16,8 +16,14 @@ sentry {
     autoInstallation {
         enabled = false
     }
-    ignoredBuildTypes = ["debug"]
+    ignoredBuildTypes = ["debug", "release"]
     tracingInstrumentation {
+        enabled = false
+    }
+}
+
+afterEvaluate {
+    tasks.matching { it.name.startsWith('uploadSentry') || it.name.startsWith('sentry') }.configureEach {
         enabled = false
     }
 }
