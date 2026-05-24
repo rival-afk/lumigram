@@ -17,3 +17,5 @@ google-services.json
 sentry.properties
 .env
 .jdk/
+AGENTS.md
+BUGS.md
