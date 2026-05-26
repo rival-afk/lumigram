@@ -1,3 +1,20 @@
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
-    android:src="@mipmap/ic_launcher_foreground" />
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:translateX="21.6"
+        android:translateY="21.6">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,28 L30,72 C30,76.4 33.6,80 38,80 L54,80 L54,72 L40,72 L40,28 Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,28 L68,28 L68,36 L38,36 L38,46 L64,46 L64,54 L38,54 L38,64 L68,64 L68,72 L30,72 Z" />
+    </group>
+</vector>

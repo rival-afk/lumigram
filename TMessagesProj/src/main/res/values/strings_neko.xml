@@ -71,7 +71,9 @@
     <string name="Translation">Translate Lumigram</string>
     <string name="GooglePlay">Google Play</string>
     <string name="ResetStickerSize">Reset sticker size</string>
-    <string name="OfficialChannelUsername">nekoupdates</string>
+    <string name="OfficialChannelUsername">lumigram_dev</string>
+    <string name="ReleasesChannelUsername">lumigram_releases</string>
+    <string name="ReleasesChannel">Releases channel</string>
     <string name="RestartAppToTakeEffect">Restart the app to take effect.</string>
     <string name="DisableAppBarShadow">Disable title bar shadow</string>
     <string name="MediaPreview">Media preview in dialog list</string>
@@ -355,4 +357,7 @@
     <string name="PluginsSafeMode">Safe Mode Active</string>
     <string name="PluginsSafeModeAbout">A plugin has crashed. Tap to exit safe mode and re-enable plugins.</string>
     <string name="PluginsSafeModeExited">Safe mode disabled</string>
+    <string name="PluginsInstall">Install Plugin</string>
+    <string name="PluginsInstallAction">Install</string>
+    <string name="NoProxy">No proxy configured</string>
 </resources>

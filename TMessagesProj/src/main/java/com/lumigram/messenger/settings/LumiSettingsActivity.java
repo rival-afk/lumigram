@@ -61,10 +61,12 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
     private final int chatRow = rowId++;
     private final int passcodeRow = rowId++;
     private final int pluginsRow = rowId++;
+    private final int proxyRow = rowId++;
     private final int experimentRow = rowId++;
     private final int accessibilityRow = rowId++;
 
     private final int channelRow = rowId++;
+    private final int releasesRow = rowId++;
     private final int websiteRow = rowId++;
     private final int sourceCodeRow = rowId++;
     private final int translationRow = rowId++;
@@ -166,6 +168,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
             items.add(UItem.asButton(passcodeRow, R.drawable.msg_secret, LocaleController.getString(R.string.PasscodeNeko)).slug("passcode"));
         }
         items.add(UItem.asButton(pluginsRow, R.drawable.settings_devices, LocaleController.getString(R.string.Plugins)).slug("plugins"));
+        items.add(UItem.asButton(proxyRow, R.drawable.settings_security, LocaleController.getString(R.string.ProxySettings)).slug("proxy"));
         items.add(UItem.asButton(experimentRow, R.drawable.msg_fave, LocaleController.getString(R.string.NotificationsOther)).slug("experiment"));
         AccessibilityManager am = (AccessibilityManager) ApplicationLoader.applicationContext.getSystemService(Context.ACCESSIBILITY_SERVICE);
         if (am != null && am.isTouchExplorationEnabled()) {
@@ -174,6 +177,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
         items.add(UItem.asShadow(null));
 
         items.add(UItem.asButton(channelRow, R.drawable.msg_channel, LocaleController.getString(R.string.OfficialChannel), "@" + LocaleController.getString(R.string.OfficialChannelUsername)).slug("channel"));
+        items.add(UItem.asButton(releasesRow, R.drawable.msg_channel, LocaleController.getString(R.string.ReleasesChannel), "@" + LocaleController.getString(R.string.ReleasesChannelUsername)).slug("releases"));
         items.add(UItem.asButton(websiteRow, R.drawable.msg_language, LocaleController.getString(R.string.OfficialSite), "github.com/rival-afk/lumigram").slug("website"));
         items.add(UItem.asButton(sourceCodeRow, R.drawable.msg_link, LocaleController.getString(R.string.ViewSourceCode), "GitHub").slug("sourceCode"));
         items.add(UItem.asButtonSubtext(translationRow, R.drawable.msg_translate, LocaleController.getString(R.string.Translation), LocaleController.getString(R.string.TranslationAbout)).slug("translation"));
@@ -210,12 +214,16 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
             presentFragment(new LumiPasscodeSettingsActivity());
         } else if (id == pluginsRow) {
             presentFragment(new LumiPluginsActivity());
+        } else if (id == proxyRow) {
+            presentFragment(new LumiProxySettingsActivity());
         } else if (id == experimentRow) {
             presentFragment(new LumiExperimentalSettingsActivity());
         } else if (id == accessibilityRow) {
             presentFragment(new AccessibilitySettingsActivity());
         } else if (id == channelRow) {
             getMessagesController().openByUserName(LocaleController.getString(R.string.OfficialChannelUsername), this, 1);
+        } else if (id == releasesRow) {
+            getMessagesController().openByUserName(LocaleController.getString(R.string.ReleasesChannelUsername), this, 1);
         } else if (id == donateRow) {
             presentFragment(new LumiDonateActivity());
         } else if (id == translationRow) {
@@ -283,6 +291,8 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
             return new LumiExperimentalSettingsActivity();
         } else if (icon == R.drawable.settings_devices) {
             return new LumiPluginsActivity();
+        } else if (icon == R.drawable.settings_security) {
+            return new LumiProxySettingsActivity();
         }
         return new LumiSettingsActivity();
     }
@@ -294,6 +304,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
                 R.drawable.msg_theme,
                 R.drawable.msg_discussion,
                 R.drawable.settings_devices,
+                R.drawable.settings_security,
                 R.drawable.msg_fave,
         };
         for (var i = 0; i < icons.length; i++) {

@@ -17,7 +17,7 @@ import java.util.Locale;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-final class PluginArchiveParser {
+public final class PluginArchiveParser {
 
     private static final String[] MANIFEST_CANDIDATES = {
             "lumigram-plugin.json",
@@ -39,7 +39,7 @@ final class PluginArchiveParser {
     }
 
     @Nullable
-    static PluginManifest parse(@NonNull File archiveFile) {
+    public static PluginManifest parse(@NonNull File archiveFile) {
         try (ZipFile zipFile = new ZipFile(archiveFile)) {
             ZipEntry manifestEntry = findManifest(zipFile);
             if (manifestEntry == null) {

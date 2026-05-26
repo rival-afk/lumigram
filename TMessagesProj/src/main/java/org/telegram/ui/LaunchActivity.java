@@ -91,6 +91,10 @@ import com.google.firebase.appindexing.Action;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.AssistActionBuilder;
 
+import com.lumigram.messenger.plugins.PluginArchiveParser;
+import com.lumigram.messenger.plugins.PluginManager;
+import com.lumigram.messenger.plugins.PluginManifest;
+
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
@@ -1860,6 +1864,13 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
                     }
 
                     if (data != null) {
+                        String filename = data.getLastPathSegment();
+                        if (filename != null && filename.toLowerCase().endsWith(".plugin")) {
+                            showPluginInstallDialog(data);
+                            if (progress != null) progress.end();
+                            return false;
+                        }
+
                         String username = null;
                         String referrer = null;
                         String login = null;
@@ -3664,6 +3675,53 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
                 }
             }
             return content;
+        }
+    }
+
+    private void showPluginInstallDialog(Uri pluginUri) {
+        try {
+            File tempFile = new File(getCacheDir(), "plugin_install_temp.plugin");
+            try (InputStream in = getContentResolver().openInputStream(pluginUri);
+                 FileOutputStream out = new FileOutputStream(tempFile)) {
+                byte[] buf = new byte[8192];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+            }
+
+            PluginManifest manifest = PluginArchiveParser.parse(tempFile);
+            if (manifest == null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(LocaleController.getString(R.string.Plugins));
+            builder.setMessage("Invalid plugin file");
+            builder.setPositiveButton(LocaleController.getString(R.string.OK), null);
+            builder.show();
+            tempFile.delete();
+            return;
+        }
+
+        String details = "Name: " + manifest.name + "\n"
+                + "Version: " + manifest.version + "\n"
+                + "Author: " + (manifest.author != null ? manifest.author : "Unknown") + "\n"
+                + "Type: " + manifest.type + "\n"
+                + (manifest.description != null ? "\n" + manifest.description : "");
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(LocaleController.getString(R.string.PluginsInstall));
+        builder.setMessage(details);
+        builder.setPositiveButton(LocaleController.getString(R.string.PluginsInstallAction), (dialog, which) -> {
+            PluginManager.getInstance().installPlugin(tempFile);
+            tempFile.delete();
+            Toast.makeText(this, LocaleController.getString(R.string.PluginsInstalled) + ": " + manifest.name + " v" + manifest.version, Toast.LENGTH_SHORT).show();
+        });
+        builder.setNegativeButton(LocaleController.getString(R.string.Cancel), (dialog, which) -> {
+            tempFile.delete();
+        });
+        builder.show();
+        } catch (Exception e) {
+            FileLog.e(e);
+            Toast.makeText(this, "Failed to read plugin file", Toast.LENGTH_SHORT).show();
         }
     }
 

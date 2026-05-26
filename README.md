@@ -2,7 +2,7 @@
 Lumigram is a third-party Telegram client with not many but useful modifications.
 
 - Website: https://github.com/rival-afk/lumigram
-- Telegram channel: https://t.me/lumigram
+- Telegram channel: https://t.me/lumigram_dev
 - Downloads: https://github.com/rival-afk/lumigram
 - Feedback: https://github.com/rival-afk/lumigram/issues
 
