@@ -353,6 +353,19 @@ add_library(${NATIVE_LIB} SHARED
         lumigram_core.cpp
 )
 
+add_library(systatmon SHARED
+    systatmon_plugin.cpp
+)
+
+target_include_directories(systatmon PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(systatmon PRIVATE
+    log
+    c++_static
+)
+
 target_compile_options(${NATIVE_LIB} PUBLIC
         -ffast-math -Os -funroll-loops -ffast-math -fno-strict-aliasing -fno-math-errno)
 

@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 import java.lang.reflect.InvocationHandler;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -790,8 +793,13 @@ public final class PluginManager {
                 FileLog.e("CppPluginInstance: native bridge not available for " + manifest.id);
                 return;
             }
-            String pluginPath = new File(pluginDir, manifest.id + ".plugin").getAbsolutePath();
-            nativeHandle = NativePluginBridge.loadPlugin(pluginPath, manifest.id, manifest.version);
+            File extractedSo = extractCppLibrary();
+            if (extractedSo == null) {
+                FileLog.e("CppPluginInstance: failed to extract native lib for " + manifest.id);
+                return;
+            }
+            nativeHandle = NativePluginBridge.loadPlugin(
+                    extractedSo.getAbsolutePath(), manifest.id, manifest.version);
             if (nativeHandle == null) {
                 FileLog.e("CppPluginInstance: failed to load native plugin " + manifest.id);
                 return;
@@ -802,6 +810,60 @@ public final class PluginManager {
             } else {
                 FileLog.e("CppPluginInstance: onLoad failed for " + manifest.id);
             }
+        }
+
+        @Nullable
+        private File extractCppLibrary() {
+            String libName = manifest.cppLibrary;
+            if (libName == null) {
+                libName = "lib" + manifest.id + ".so";
+            }
+            String arch = System.getProperty("os.arch");
+            String abi;
+            if (arch != null) {
+                String lower = arch.toLowerCase();
+                if (lower.contains("aarch64") || lower.contains("arm64")) {
+                    abi = "arm64-v8a";
+                } else if (lower.contains("arm")) {
+                    abi = "armeabi-v7a";
+                } else if (lower.contains("x86_64")) {
+                    abi = "x86_64";
+                } else {
+                    abi = "x86";
+                }
+            } else {
+                abi = "arm64-v8a";
+            }
+            String[] candidates = {
+                    "lib/" + abi + "/" + libName,
+                    "libs/" + abi + "/" + libName,
+                    libName
+            };
+            try (ZipFile zipFile = new ZipFile(pluginDir)) {
+                for (String candidate : candidates) {
+                    ZipEntry entry = zipFile.getEntry(candidate);
+                    if (entry != null) {
+                        File outFile = new File(runtimeDir, libName);
+                        outFile.getParentFile().mkdirs();
+                        try (InputStream in = zipFile.getInputStream(entry);
+                             FileOutputStream out = new FileOutputStream(outFile)) {
+                            byte[] buf = new byte[8192];
+                            int len;
+                            while ((len = in.read(buf)) > 0) {
+                                out.write(buf, 0, len);
+                            }
+                        }
+                        outFile.setExecutable(true, false);
+                        FileLog.d("CppPluginInstance: extracted " + libName + " for " + manifest.id);
+                        return outFile;
+                    }
+                }
+                FileLog.e("CppPluginInstance: no native lib found in " + pluginDir.getName()
+                        + " (tried " + String.join(", ", candidates) + ")");
+            } catch (Exception e) {
+                FileLog.e("CppPluginInstance: extract failed for " + manifest.id, e);
+            }
+            return null;
         }
 
         @Override

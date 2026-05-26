@@ -1,9 +1,8 @@
-<animated-vector xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt">
     <aapt:attr name="android:drawable">
         <vector
-            android:name="splash"
+            android:name="root"
             android:width="320dp"
             android:height="320dp"
             android:viewportWidth="320"
@@ -12,128 +11,34 @@
                 android:name="scaleme"
                 android:pivotX="160"
                 android:pivotY="160"
-                android:scaleX="1"
-                android:scaleY="1">
-                <group android:name="bg">
-                    <path
-                        android:name="circle"
-                        android:pathData="M 160 110 C 146.744 110 134.018 115.271 124.645 124.645 C 115.271 134.018 110 146.744 110 160 C 110 173.256 115.271 185.982 124.645 195.355 C 134.018 204.729 146.744 210 160 210 C 173.256 210 185.982 204.729 195.355 195.355 C 204.729 185.982 210 173.256 210 160 C 210 146.744 204.729 134.018 195.355 124.645 C 185.982 115.271 173.256 110 160 110 Z"
-                        android:fillColor="@color/ic_launcher_background"
-                        android:fillAlpha="0"
-                        android:strokeWidth="1" />
-                </group>
-                <group
-                    android:name="fg"
-                    android:pivotX="160"
-                    android:pivotY="160"
-                    android:scaleX="0.5"
-                    android:scaleY="0.5">
-                    <clip-path
-                        android:name="mask"
-                        android:pathData="M 160 60 C 133.489 60 108.036 70.543 89.289 89.289 C 70.543 108.036 60 133.489 60 160 C 60 186.511 70.543 211.964 89.289 230.711 C 108.036 249.457 133.489 260 160 260 C 186.511 260 211.964 249.457 230.711 230.711 C 249.457 211.964 260 186.511 260 160 C 260 133.489 249.457 108.036 230.711 89.289 C 211.964 70.543 186.511 60 160 60 Z" />
-                    <group
-                        android:name="logo_group"
-                        android:pivotX="160"
-                        android:pivotY="160"
-                        android:scaleX="0.5"
-                        android:scaleY="0.5">
-                        <path
-                            android:name="logo_plane"
-                            android:pathData="M73.7,157.5 C120.1,137.4 151.1,124.1 166.5,117.6 C210.7,99.3 219.9,96.1 225.9,96.0 C227.2,96.0 230.2,96.3 232.1,97.8 C233.7,99.2 234.1,100.9 234.3,102.1 C234.5,103.4 234.8,106.2 234.6,108.4 C232.2,133.5 221.8,194.5 216.6,222.6 C214.3,234.5 209.9,238.5 205.7,238.9 C196.4,239.7 189.4,232.8 180.5,226.9 C166.5,217.7 158.6,212.0 145.0,203.1 C129.3,192.8 139.4,187.1 148.4,177.8 C150.7,175.4 191.5,138.4 192.2,135.1 C192.3,134.6 192.4,133.1 191.5,132.3 C190.6,131.4 189.2,131.7 188.2,131.9 C186.8,132.3 164.4,147.0 121.1,176.2 C114.7,180.6 109.0,182.7 103.8,182.6 C98.2,182.5 87.2,179.4 79.1,176.7 C69.1,173.5 61.2,171.8 61.9,166.3 C62.3,163.4 66.2,160.5 73.7,157.5 Z"
-                            android:fillColor="#FFFFFF"
-                            android:fillAlpha="0"
-                            android:strokeWidth="1" />
-                    </group>
-                </group>
+                android:scaleX="0.01"
+                android:scaleY="0.01">
+                <path
+                    android:name="circle_bg"
+                    android:fillColor="@color/ic_launcher_background"
+                    android:pathData="M 160 160 m -140 0 a 140 140 0 1 0 280 0 a 140 140 0 1 0 -280 0 Z" />
+                <path
+                    android:name="lumigram_l"
+                    android:fillColor="#FFFFFF"
+                    android:pathData="M 130 100 L 130 200 C 130 210 138 218 148 218 L 180 218 L 180 200 L 148 200 L 148 100 Z
+                                 M 130 100 L 200 100 L 200 118 L 148 118 L 148 140 L 195 140 L 195 158 L 148 158 L 148 180 L 200 180 L 200 198 L 130 198 Z" />
             </group>
         </vector>
     </aapt:attr>
-    <target android:name="circle">
-        <aapt:attr name="android:animation">
-            <set>
-                <objectAnimator
-                    android:propertyName="pathData"
-                    android:startOffset="200"
-                    android:duration="600"
-                    android:valueFrom="M 160 110 C 146.744 110 134.018 115.271 124.645 124.645 C 115.271 134.018 110 146.744 110 160 C 110 173.256 115.271 185.982 124.645 195.355 C 134.018 204.729 146.744 210 160 210 C 173.256 210 185.982 204.729 195.355 195.355 C 204.729 185.982 210 173.256 210 160 C 210 146.744 204.729 134.018 195.355 124.645 C 185.982 115.271 173.256 110 160 110 Z"
-                    android:valueTo="M 160 60 C 133.489 60 108.036 70.543 89.289 89.289 C 70.543 108.036 60 133.489 60 160 C 60 186.511 70.543 211.964 89.289 230.711 C 108.036 249.457 133.489 260 160 260 C 186.511 260 211.964 249.457 230.711 230.711 C 249.457 211.964 260 186.511 260 160 C 260 133.489 249.457 108.036 230.711 89.289 C 211.964 70.543 186.511 60 160 60 Z"
-                    android:valueType="pathType"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-                <objectAnimator
-                    android:propertyName="fillAlpha"
-                    android:startOffset="200"
-                    android:duration="200"
-                    android:valueFrom="0"
-                    android:valueTo="1"
-                    android:valueType="floatType"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-            </set>
-        </aapt:attr>
-    </target>
-    <target android:name="logo_group">
-        <aapt:attr name="android:animation">
-            <set>
-                <objectAnimator
-                    android:startOffset="400"
-                    android:duration="500"
-                    android:propertyName="translateX"
-                    android:valueFrom="160"
-                    android:valueTo="0"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-                <objectAnimator
-                    android:startOffset="400"
-                    android:duration="500"
-                    android:propertyName="translateY"
-                    android:valueFrom="160"
-                    android:valueTo="0"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-                <objectAnimator
-                    android:startOffset="400"
-                    android:duration="500"
-                    android:propertyName="scaleX"
-                    android:valueFrom="0.25"
-                    android:valueTo="0.5"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-                <objectAnimator
-                    android:startOffset="400"
-                    android:duration="500"
-                    android:propertyName="scaleY"
-                    android:valueFrom="0.25"
-                    android:valueTo="0.5"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-            </set>
-        </aapt:attr>
-    </target>
-    <target android:name="logo_plane">
-        <aapt:attr name="android:animation">
-            <set>
-                <objectAnimator
-                    android:propertyName="fillAlpha"
-                    android:startOffset="400"
-                    android:duration="400"
-                    android:valueFrom="0"
-                    android:valueTo="1"
-                    android:valueType="floatType"
-                    android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
-            </set>
-        </aapt:attr>
-    </target>
-    <target android:name="fg">
+    <target android:name="scaleme">
         <aapt:attr name="android:animation">
             <set>
                 <objectAnimator
                     android:propertyName="scaleX"
-                    android:startOffset="200"
                     android:duration="600"
-                    android:valueFrom="0.5"
+                    android:valueFrom="0.01"
                     android:valueTo="1"
                     android:valueType="floatType"
                     android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
                 <objectAnimator
                     android:propertyName="scaleY"
-                    android:startOffset="200"
                     android:duration="600"
-                    android:valueFrom="0.5"
+                    android:valueFrom="0.01"
                     android:valueTo="1"
                     android:valueType="floatType"
                     android:interpolator="@android:interpolator/fast_out_extra_slow_in" />
