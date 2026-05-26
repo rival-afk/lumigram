@@ -66,7 +66,7 @@ public class LumiPasscodeSettingsActivity extends BaseLumiSettingsActivity {
     @Override
     protected void fillItems(ArrayList<UItem> items, UniversalAdapter adapter) {
         items.add(UItem.asCheck(showInSettingsRow, LocaleController.getString(R.string.PasscodeShowInSettings)).setEnabled(passcodeSet).setChecked(!PasscodeHelper.isSettingsHidden()));
-        var link = String.format(Locale.ENGLISH, "https://t.me/nekosettings/%s", PasscodeHelper.getSettingsKey());
+        var link = String.format(Locale.ENGLISH, "https://t.me/lumisettings/%s", PasscodeHelper.getSettingsKey());
         var stringBuilder = new SpannableStringBuilder(AndroidUtilities.replaceTags(LocaleController.getString(R.string.PasscodeShowInSettingsAbout)));
         stringBuilder.append("\n").append(link);
         stringBuilder.setSpan(new URLSpanNoUnderline(null) {

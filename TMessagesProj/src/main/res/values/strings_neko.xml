@@ -328,4 +328,31 @@
 
     <!-- Accessibility -->
     <string name="AccessibilitySettings">Accessibility settings</string>
+
+    <!-- Plugins -->
+    <string name="Plugins" translatable="false">Plugins</string>
+    <string name="PluginsTitle">Plugin Management</string>
+    <string name="PluginsInstalled">Installed Plugins</string>
+    <string name="PluginsStore">Plugin Store</string>
+    <string name="PluginsStoreAbout">Browse and install plugins from the Lumigram store.</string>
+    <string name="PluginsNone">No plugins installed</string>
+    <string name="PluginsExitTitle">Exit Lumigram</string>
+    <string name="PluginsExitConfirm">Are you sure you want to exit Lumigram?</string>
+    <string name="PluginsExit">Exit</string>
+    <string name="PluginsLoad">Load</string>
+    <string name="PluginsUnload">Unload</string>
+    <string name="PluginsDisable">Disable</string>
+    <string name="PluginsEnable">Enable</string>
+    <string name="PluginsUninstall">Uninstall</string>
+    <string name="PluginsRunning">Running</string>
+    <string name="PluginsLoading">Loading</string>
+    <string name="PluginsInstalledIdle">Loaded</string>
+    <string name="PluginsDisabled">Disabled</string>
+    <string name="PluginsError">Error</string>
+    <string name="PluginsAuthor">Author:</string>
+    <string name="PluginsUninstallConfirm">Are you sure you want to uninstall %1$s?</string>
+    <string name="PluginsStoreComingSoon">The plugin store is under development. Check back later!</string>
+    <string name="PluginsSafeMode">Safe Mode Active</string>
+    <string name="PluginsSafeModeAbout">A plugin has crashed. Tap to exit safe mode and re-enable plugins.</string>
+    <string name="PluginsSafeModeExited">Safe mode disabled</string>
 </resources>

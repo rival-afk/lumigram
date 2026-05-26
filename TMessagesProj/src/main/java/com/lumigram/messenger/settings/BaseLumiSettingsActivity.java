@@ -149,11 +149,11 @@ public abstract class BaseLumiSettingsActivity extends BaseFragment {
                         .setScrimViewBackground(listView.getClipBackground(view))
                         .add(R.drawable.msg_copy, LocaleController.getString(R.string.CopyLink), () -> {
                             if ("copyReportId".equals(slug)) {
-                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/nekosettings/%s", getMessagesController().linkPrefix, "reportId"));
+                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/lumisettings/%s", getMessagesController().linkPrefix, "reportId"));
                             } else if ("checkUpdate".equals(slug)) {
-                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/nekosettings/%s", getMessagesController().linkPrefix, "update"));
+                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/lumisettings/%s", getMessagesController().linkPrefix, "update"));
                             } else {
-                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/nekosettings/%s?r=%s", getMessagesController().linkPrefix, key, slug));
+                                AndroidUtilities.addToClipboard(String.format(Locale.getDefault(), "https://%s/lumisettings/%s?r=%s", getMessagesController().linkPrefix, key, slug));
                             }
                             BulletinFactory.of(this).createCopyLinkBulletin().show();
                         })

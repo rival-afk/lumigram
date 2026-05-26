@@ -60,6 +60,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
     private final int appearanceRow = rowId++;
     private final int chatRow = rowId++;
     private final int passcodeRow = rowId++;
+    private final int pluginsRow = rowId++;
     private final int experimentRow = rowId++;
     private final int accessibilityRow = rowId++;
 
@@ -164,6 +165,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
         if (!PasscodeHelper.isSettingsHidden()) {
             items.add(UItem.asButton(passcodeRow, R.drawable.msg_secret, LocaleController.getString(R.string.PasscodeNeko)).slug("passcode"));
         }
+        items.add(UItem.asButton(pluginsRow, R.drawable.settings_devices, LocaleController.getString(R.string.Plugins)).slug("plugins"));
         items.add(UItem.asButton(experimentRow, R.drawable.msg_fave, LocaleController.getString(R.string.NotificationsOther)).slug("experiment"));
         AccessibilityManager am = (AccessibilityManager) ApplicationLoader.applicationContext.getSystemService(Context.ACCESSIBILITY_SERVICE);
         if (am != null && am.isTouchExplorationEnabled()) {
@@ -206,6 +208,8 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
             presentFragment(new LumiAppearanceSettingsActivity());
         } else if (id == passcodeRow) {
             presentFragment(new LumiPasscodeSettingsActivity());
+        } else if (id == pluginsRow) {
+            presentFragment(new LumiPluginsActivity());
         } else if (id == experimentRow) {
             presentFragment(new LumiExperimentalSettingsActivity());
         } else if (id == accessibilityRow) {
@@ -215,11 +219,11 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
         } else if (id == donateRow) {
             presentFragment(new LumiDonateActivity());
         } else if (id == translationRow) {
-            Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram");
+            Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram");
         } else if (id == websiteRow) {
             Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram");
         } else if (id == sourceCodeRow) {
-            Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram");
+            Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram");
         } else if (id >= sponsorRow) {
             var news = newsList.get(id - sponsorRow);
             Browser.openUrl(getParentActivity(), news.url);
@@ -277,6 +281,8 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
             return new LumiChatSettingsActivity();
         } else if (icon == R.drawable.msg_fave) {
             return new LumiExperimentalSettingsActivity();
+        } else if (icon == R.drawable.settings_devices) {
+            return new LumiPluginsActivity();
         }
         return new LumiSettingsActivity();
     }
@@ -287,6 +293,7 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
                 R.drawable.msg_media,
                 R.drawable.msg_theme,
                 R.drawable.msg_discussion,
+                R.drawable.settings_devices,
                 R.drawable.msg_fave,
         };
         for (var i = 0; i < icons.length; i++) {
@@ -323,9 +330,10 @@ public class LumiSettingsActivity extends BaseLumiSettingsActivity implements Fa
 
         searchResultList.add(new SearchResult(20000, LocaleController.getString(R.string.OfficialChannel), "@" + LocaleController.getString(R.string.OfficialChannelUsername), R.drawable.msg2_help, () -> getMessagesController().openByUserName(LocaleController.getString(R.string.OfficialChannelUsername), this, 1)));
         searchResultList.add(new SearchResult(20001, LocaleController.getString(R.string.OfficialSite), "github.com/rival-afk/lumigram", R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram")));
-        searchResultList.add(new SearchResult(20002, LocaleController.getString(R.string.ViewSourceCode), "GitHub", R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram")));
-        searchResultList.add(new SearchResult(20003, LocaleController.getString(R.string.Translation), LocaleController.getString(R.string.TranslationAbout), R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/Lumigram/Lumigram")));
+        searchResultList.add(new SearchResult(20002, LocaleController.getString(R.string.ViewSourceCode), "GitHub", R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram")));
+        searchResultList.add(new SearchResult(20003, LocaleController.getString(R.string.Translation), LocaleController.getString(R.string.TranslationAbout), R.drawable.msg2_help, () -> Browser.openUrl(getParentActivity(), "https://github.com/rival-afk/lumigram")));
         searchResultList.add(new SearchResult(20004, LocaleController.getString(R.string.Donate), LocaleController.getString(R.string.DonateAbout), R.drawable.msg2_help, () -> presentFragment(new LumiDonateActivity())));
+        searchResultList.add(new SearchResult(20005, LocaleController.getString(R.string.Plugins), null, R.drawable.msg2_help, () -> presentFragment(new LumiPluginsActivity())));
 
         return searchResultList;
     }
